@@ -1,14 +1,9 @@
-/**
- * Embedded Sanity Studio — runs at /studio on your own domain.
- * Your client signs in with the email you invite them with from sanity.io
- * and edits content from a WordPress-like UI. Changes go live immediately.
- */
-import { NextStudio } from "next-sanity/studio";
-import config from "../../../sanity.config";
+import { metadata, viewport } from "next-sanity/studio";
+import Studio from "./Studio";
 
-export const dynamic = "force-static";
-export { metadata, viewport } from "next-sanity/studio";
+export { metadata, viewport };
 
 export default function StudioPage() {
-  return <NextStudio config={config} />;
+  return <Studio />;
 }
+
