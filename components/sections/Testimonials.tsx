@@ -9,7 +9,7 @@ const testimonials = [
     role: "Pflegebedürftige Kundin",
     quote:
       `\u201eDie Bewerbung war sehr einfach, und die Box kam schnell an. Die Produkte sind praktisch, von hoher Qualit\u00e4t und machen die monatliche Bestellung f\u00fcr uns viel einfacher.\u201c`,
-    avatar: "/Desktop 02.png",
+    avatar: "/desktop-02.png",
     portrait: "/7d0378f83f29680a409114d8aba85c16563199cf.png",
     stars: 5,
   },
@@ -17,18 +17,18 @@ const testimonials = [
     name: "Heda B.",
     role: "Pflegebedürftige Kundin",
     quote:
-      `\u201eDie Bestellung war sehr einfach und die Boxen kamen schnell. Die Produkte sind praktisch und ich bin sehr zufrieden! Die Qualit\u00e4t und auch der Inhalt dieser Box gefallen mir sehr.\u201c`,
-    avatar: "/Desktop 01 (1).png",
-    portrait: "/Image Wrapper.png",
+      `\u201eDie Bestellung war sehr einfach und die Boxen kamen schnell. Die Produkte sind praktisch und ich bin sehr zufrieden! Die Qualität und auch der Inhalt dieser Box gefallen mir sehr.\u201c`,
+    avatar: "/testimonial-avatar-1.png",
+    portrait: "/Image-Wrapper.png",
     stars: 5,
   },
   {
     name: "Thomas R.",
     role: "Pflegender Angehöriger",
     quote:
-      `\u201eFairPflegeBox hat uns den Alltag enorm erleichtert. Kein Papierkram, keine Apotheken-Besuche \u2013 alles kommt p\u00fcnktlich nach Hause. Ein gro\u00dfartiger Service f\u00fcr pflegende Familien.\u201c`,
-    avatar: "/Desktop 01 (2).png",
-    portrait: "/Image (1).png",
+      `\u201eFairPflegeBox hat uns den Alltag enorm erleichtert. Kein Papierkram, keine Apotheken-Besuche \u2013 alles kommt pünktlich nach Hause. Ein großartiger Service für pflegende Familien.\u201c`,
+    avatar: "/desktop-01-2.png",
+    portrait: "/testimonial-portrait-1.png",
     stars: 5,
   },
   {
@@ -36,7 +36,7 @@ const testimonials = [
     role: "Pflegender Angehöriger",
     quote:
       `\u201eIch bin begeistert von der einfachen Bestellung und der schnellen Lieferung. Die Produkte sind hochwertig und genau das, was wir brauchen. Absolut empfehlenswert!\u201c`,
-    avatar: "/Desktop 01.png",
+    avatar: "/desktop-01.png",
     portrait: "/ecc395604dfa0fb936e6d06621ac1be119a2d329.png",
     stars: 5,
   },

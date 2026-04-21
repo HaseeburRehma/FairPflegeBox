@@ -6,7 +6,7 @@ const services = [
     title: "Breite Produktwahl",
     description:
       "Wählen Sie aus grundlegenden Pflegeprodukten, die für die tägliche Hygiene, den Schutz und die Nutzung zu Hause ausgewählt wurden.",
-    image: "/Breite-Produktauswahl.png",
+    image: "/breite-produktauswahl.png",
     imageAlt: "FairPflegeBox Breite Produktauswahl auf Küchentresen",
     cta: "Produkte erkunden",
     href: "/produkte",
@@ -24,7 +24,7 @@ const services = [
     title: "Schnelle & einfache Bewerbung",
     description:
       "Bewerben Sie sich online in nur wenigen Minuten mit einem einfachen und stressfreien Prozess.",
-    image: "/Schnelle-&-einfache-Bestellung.png",
+    image: "/schnelle-einfache-bestellung.png",
     imageAlt: "Seniorin bestellt FairPflegeBox einfach online am Laptop",
     cta: "Jetzt bewerben",
     href: "/bestellen",
@@ -33,7 +33,7 @@ const services = [
     title: "Stressfreier Prozess",
     description:
       "Wir kümmern uns um den monatlichen Boxprozess, damit die Bestellung einfach und stressfrei bleibt.",
-    image: "/ecc395604dfa0fb936e6d06621ac1be119a2d329.png",
+    image: "/stressfreier-prozess.png",
     imageAlt: "FairPflegeBox stressfreier Bestellprozess zu Hause",
     cta: "Erfahren Sie mehr",
     href: "/ueber-uns",

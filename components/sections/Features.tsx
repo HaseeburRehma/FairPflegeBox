@@ -9,19 +9,19 @@ const slides = [
     stat: "1.300+",
     title: "Pflegeboxen geliefert",
     desc: "FairPflegeBox hilft Haushalten, regelmäßig essentielle Pflegeprodukte zu erhalten, wodurch die tägliche Bestellung einfacher und zuverlässiger wird.",
-    image: "/Pflegeboxen geliefert.png",
+    image: "/pflegeboxen-geliefert.png",
   },
   {
     stat: "100%",
     title: "Kostenlos über Pflegekasse",
     desc: "Alle Pflegehilfsmittel werden vollständig über die gesetzliche Pflegekasse abgerechnet – ohne Zuzahlungen oder versteckte Kosten.",
-    image: "/Dedicated Volunteers.png",
+    image: "/dedicated-volunteers.png",
   },
   {
     stat: "40 €",
     title: "Monatliches Budget",
     desc: "Nutzen Sie Ihr monatliches Pflegehilfsmittel-Budget von bis zu 40 Euro vollständig aus – flexibel und bedarfsgerecht.",
-    image: "/Stressfreier-Prozess.png",
+    image: "/stressfreier-prozess.png",
   },
 ];
 
@@ -180,7 +180,7 @@ export default function Features() {
             <div className="bg-[#F6F6F8] rounded-3xl p-6 sm:p-7 flex flex-col justify-center min-h-[200px]">
               <div className="w-12 h-12 sm:w-14 sm:h-14 mb-5">
                 <Image
-                  src="/Keine Papierformulare.png"
+                  src="/keine-papierformulare.png"
                   alt="Keine Papierformulare"
                   width={56}
                   height={56}
@@ -198,7 +198,7 @@ export default function Features() {
             {/* ── Top-right: Delivery image ── */}
             <div className="relative rounded-3xl overflow-hidden min-h-[200px]">
               <Image
-                src="/Stressfreier-Prozess.png"
+                src="/stressfreier-prozess.png"
                 alt="FairPflegeBox Lieferung"
                 fill
                 className="object-cover object-center"

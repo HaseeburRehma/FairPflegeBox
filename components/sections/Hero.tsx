@@ -155,7 +155,7 @@ export default function Hero() {
                 {/* Right column: portrait image — rounded corners, inset from card edges */}
                 <div className="relative w-[180px] sm:w-[210px] flex-shrink-0 rounded-2xl overflow-hidden self-stretch">
                   <Image
-                    src="/Image Wrapper.png"
+                    src="/image-wrapper.png"
                     alt="Zufriedene Pflegebedürftige Person zu Hause"
                     fill
                     unoptimized
