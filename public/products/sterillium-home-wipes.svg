@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Sterillium home Desinfektionstücher Packung" preserveAspectRatio="xMidYMid slice">
+  <rect width="600" height="450" fill="#DFEFEF"/>
+  <defs>
+    <linearGradient id="shWipe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.65" stop-color="#f2f5fa"/>
+      <stop offset="1" stop-color="#e4e9f1"/>
+    </linearGradient>
+    <filter id="shShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="14"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#shShadow)">
+    <path d="M60 150 Q60 130 80 128 L520 128 Q540 130 540 150 L540 320 Q540 340 520 342 L80 342 Q60 340 60 320 Z"
+          fill="url(#shWipe)" stroke="#dadfe8" stroke-width="0.8"/>
+    <path d="M60 150 Q60 130 80 128 L520 128 Q540 130 540 150 L540 170 L60 170 Z" fill="#f8fafc"/>
+    <rect x="255" y="212" width="90" height="38" rx="10" fill="#ffffff" stroke="#c7cedb" stroke-width="1"/>
+    <circle cx="272" cy="231" r="8" fill="#16388A"/>
+    <text x="300" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#16388A">Sterillium<tspan font-size="7" baseline-shift="super">®</tspan></text>
+    <text x="300" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#0095b4">home</text>
+    <g transform="translate(180,260)">
+      <circle r="28" fill="#E9F6EC" stroke="#8CC591" stroke-width="1.4"/>
+      <text text-anchor="middle" y="-4" font-family="Arial, sans-serif" font-size="8" font-weight="800" fill="#2E8B46">plastic-</text>
+      <text text-anchor="middle" y="6" font-family="Arial, sans-serif" font-size="8" font-weight="800" fill="#2E8B46">free</text>
+      <text text-anchor="middle" y="16" font-family="Arial, sans-serif" font-size="6" fill="#4a8d5a">tissues</text>
+    </g>
+    <text x="300" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#0095b4">Oberflächen-Desinfektionstücher</text>
+    <text x="500" y="320" text-anchor="end" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#6a7388">100 Stk</text>
+  </g>
+</svg>

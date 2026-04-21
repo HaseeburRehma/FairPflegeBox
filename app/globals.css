@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #43358b;
+  --primary-dark: #352878;
+  --teal: #009cb4;
+  --teal-dark: #007f95;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Onest", sans-serif;
+  color: #1a1a2e;
+}
+
+/* Smooth scroll for anchor links but not for programmatic scroll */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Better focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove tap highlight on mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent horizontal overflow on all containers */
+section {
+  overflow-x: clip;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6, p, span, a, button, li, input, textarea {
+    font-family: "Onest", sans-serif;
+  }
+
+  /* Fluid typography base */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Responsive images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  /* Section label tag — teal color */
+  .section-tag {
+    @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest mb-5;
+    color: #009CB4;
+  }
+
+  .section-tag-icon {
+    @apply inline-block w-5 h-5 flex-shrink-0;
+    color: #009CB4;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-[#43358B] text-white font-semibold px-7 py-3 rounded-full
+           hover:bg-[#352878] transition-all duration-200
+           inline-flex items-center gap-2 text-sm
+           active:scale-[0.97];
+  }
+
+  .btn-outline {
+    @apply border-2 border-[#43358B] text-[#43358B] font-semibold px-7 py-3 rounded-full
+           hover:bg-[#43358B] hover:text-white transition-all duration-200
+           inline-flex items-center gap-2 text-sm
+           active:scale-[0.97];
+  }
+
+  .btn-teal {
+    @apply bg-[#009CB4] text-white font-semibold px-7 py-3 rounded-full
+           hover:bg-[#007f95] transition-all duration-200
+           inline-flex items-center gap-2 text-sm
+           active:scale-[0.97];
+  }
+
+  .btn-white {
+    @apply bg-white text-[#43358B] font-semibold px-7 py-3 rounded-full
+           hover:bg-gray-100 transition-all duration-200
+           inline-flex items-center gap-2 text-sm
+           active:scale-[0.97];
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl overflow-hidden
+           shadow-[0_2px_16px_rgba(67,53,139,0.08)]
+           hover:shadow-[0_8px_32px_rgba(67,53,139,0.14)]
+           transition-shadow duration-300;
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f5f5f7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c4c0d8;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #43358b;
+  }
+}
