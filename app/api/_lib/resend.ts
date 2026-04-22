@@ -19,7 +19,7 @@ export async function sendEmail({ from, to, subject, html, replyTo }: SendArgs) 
   }
 
   const fromAddress =
-    from || process.env.CONTACT_FROM_EMAIL || "FairPflegeBox <onboarding@resend.dev>";
+    from || process.env.CONTACT_FROM_EMAIL || "haseebtylo@gmail.com";
 
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",

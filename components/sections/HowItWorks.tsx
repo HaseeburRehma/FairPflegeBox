@@ -71,7 +71,7 @@ export default function HowItWorks() {
             </div>
 
             {/* Heading */}
-            <h2 className="text-[30px] sm:text-[36px] xl:text-[42px] font-bold text-gray-900 leading-[1.1] mb-4">
+            <h2 className="text-[30px] sm:text-[36px] xl:text-[42px] font-medium text-gray-900 leading-[1.1] mb-4">
               Ihre FairPflegeBox zu<br />erhalten ist einfach
             </h2>
 

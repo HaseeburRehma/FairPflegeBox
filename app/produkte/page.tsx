@@ -237,7 +237,7 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-[18px] sm:text-[20px] font-bold text-gray-900 leading-snug mb-3 px-1">
+      <h3 className="text-[18px] sm:text-[20px] font-medium text-gray-900 leading-snug mb-3 px-1">
         {product.title}
       </h3>
 
@@ -321,7 +321,7 @@ export default async function ProduktePage() {
     <main>
       {/* ══════ HERO ══════ */}
       <section
-        className="relative overflow-hidden pt-28 sm:pt-32 pb-20 sm:pb-28"
+        className="relative overflow-hidden pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 lg:pb-24"
         aria-label="Produkte Hero"
       >
         {/* Background photo */}
@@ -333,13 +333,19 @@ export default async function ProduktePage() {
           className="object-cover object-center"
         />
 
-        {/* Purple tint overlay — softer than homepage hero so the scene stays visible */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#43358B]/75 via-[#43358B]/55 to-[#43358B]/75" />
-        <div className="absolute inset-0 bg-[#43358B]/10" />
+        {/* Subtle base tint + brand gradient fading from clear top to solid purple bottom */}
+        <div className="absolute inset-0 bg-[#43358B]/25" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(67, 53, 139, 0) 0%, #43358B 100%)",
+          }}
+        />
 
         <div className="container mx-auto px-5 sm:px-6 xl:px-12 max-w-[1400px] relative z-10">
           <div className="mx-auto text-center pt-16 sm:pt-20">
-            <h1 className="text-[32px] sm:text-[44px] md:text-[56px] lg:text-[64px] xl:text-[72px] font-bold text-white leading-[1.05] mb-5 whitespace-normal md:whitespace-nowrap drop-shadow-[0_2px_16px_rgba(0,0,0,0.25)]">
+            <h1 className="text-[32px] sm:text-[44px] md:text-[56px] lg:text-[64px] xl:text-[72px] font-medium text-white leading-[1.05] mb-5 whitespace-normal md:whitespace-nowrap drop-shadow-[0_2px_16px_rgba(0,0,0,0.25)]">
               Qualität für die tägliche Pflege
             </h1>
             <p className="text-[15px] sm:text-[17px] text-white/85 leading-relaxed max-w-xl mx-auto mb-8">
@@ -414,7 +420,7 @@ export default async function ProduktePage() {
                   </span>
                 </div>
               </div>
-              <h2 className="text-[30px] sm:text-[40px] xl:text-[48px] font-bold text-gray-900 leading-[1.1] mb-4 max-w-[800px] mx-auto">
+              <h2 className="text-[30px] sm:text-[40px] xl:text-[48px] font-medium text-gray-900 leading-[1.1] mb-4 max-w-[800px] mx-auto">
                 Alle verfügbaren Produkte aus der FairPflegeBox Pflege Reihe
               </h2>
               <p className="text-[14px] sm:text-[15px] text-gray-500 leading-relaxed max-w-[680px] mx-auto">

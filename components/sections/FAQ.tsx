@@ -135,13 +135,13 @@ export default function FAQ() {
               </span>
             </div>
 
-            <h2 className="text-[30px] sm:text-[38px] xl:text-[44px] font-bold text-gray-900 leading-[1.08] mb-10">
+            <h2 className="text-[30px] sm:text-[38px] xl:text-[44px] font-medium text-gray-900 leading-[1.08] mb-10">
               Fragen? Wir sind<br />hier, um zu helfen
             </h2>
 
             {/* Contact card */}
             <div className="bg-white rounded-2xl border border-gray-100 p-6 max-w-sm">
-              <h3 className="font-bold text-gray-900 text-[16px] mb-1.5">
+              <h3 className="font-medium text-gray-900 text-[16px] mb-1.5">
                 Haben Sie noch Fragen?
               </h3>
               <p className="text-[13.5px] text-gray-500 leading-relaxed mb-5">

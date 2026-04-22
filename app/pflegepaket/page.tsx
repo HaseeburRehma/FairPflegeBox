@@ -121,12 +121,19 @@ export default function PflegepaketPage() {
           priority
           className="object-cover object-center"
         />
-        {/* Purple overlay only — no watermark */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#43358B]/85 via-[#43358B]/75 to-[#352878]/90" />
+        {/* Subtle base tint + brand gradient fading from clear top to solid purple bottom */}
+        <div className="absolute inset-0 bg-[#43358B]/25" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(67, 53, 139, 0) 0%, #43358B 100%)",
+          }}
+        />
 
         <div className="container mx-auto px-5 sm:px-6 xl:px-12 max-w-[1280px] relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-[32px] sm:text-[42px] xl:text-[54px] font-bold text-white leading-[1.08] mb-5">
+            <h1 className="text-[32px] sm:text-[42px] xl:text-[54px] font-medium text-white leading-[1.08] mb-5">
               Beantragen Sie die
               <br className="hidden sm:block" /> Pflegebox kostenlos
             </h1>
@@ -233,7 +240,7 @@ export default function PflegepaketPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h2 className="text-[26px] sm:text-[32px] font-bold text-gray-900 mb-3">
+                    <h2 className="text-[26px] sm:text-[32px] font-medium text-gray-900 mb-3">
                       Vielen Dank, {form.vorname || "wir haben Ihre Anfrage erhalten"}!
                     </h2>
                     <p className="text-[15px] text-gray-500 leading-relaxed max-w-md mx-auto mb-8">
@@ -266,7 +273,7 @@ export default function PflegepaketPage() {
                 {/* ═══ STEP 0: Pflegegrad ═══ */}
                 {step === 0 && (
                   <div>
-                    <h2 className="text-[22px] sm:text-[26px] font-bold text-gray-900 mb-2">
+                    <h2 className="text-[22px] sm:text-[26px] font-medium text-gray-900 mb-2">
                       Welchen Pflegegrad haben Sie?
                     </h2>
                     <p className="text-[14px] text-gray-500 leading-relaxed mb-6 sm:mb-7">
@@ -332,7 +339,7 @@ export default function PflegepaketPage() {
                 {/* ═══ STEP 1: Pflegesituation ═══ */}
                 {step === 1 && (
                   <div>
-                    <h2 className="text-[22px] sm:text-[26px] font-bold text-gray-900 mb-2">
+                    <h2 className="text-[22px] sm:text-[26px] font-medium text-gray-900 mb-2">
                       Wie ist die Pflegesituation?
                     </h2>
                     <p className="text-[14px] text-gray-500 leading-relaxed mb-6 sm:mb-7">
@@ -381,7 +388,7 @@ export default function PflegepaketPage() {
                 {/* ═══ STEP 2: Produktwahl ═══ */}
                 {step === 2 && (
                   <div>
-                    <h2 className="text-[22px] sm:text-[26px] font-bold text-gray-900 mb-2">
+                    <h2 className="text-[22px] sm:text-[26px] font-medium text-gray-900 mb-2">
                       W{"\u00e4"}hlen Sie Ihre Produkte aus
                     </h2>
                     <p className="text-[14px] text-gray-500 mb-6 sm:mb-7">
@@ -414,7 +421,7 @@ export default function PflegepaketPage() {
                               <span className="w-8 h-8 rounded-lg bg-[#EFE9FA] flex items-center justify-center flex-shrink-0">
                                 {icon}
                               </span>
-                              <h3 className="text-[15px] font-bold text-gray-900">
+                              <h3 className="text-[15px] font-medium text-gray-900">
                                 {group.title}
                               </h3>
                             </div>
@@ -463,7 +470,7 @@ export default function PflegepaketPage() {
                 {/* ═══ STEP 3: Personal Data ═══ */}
                 {step === 3 && (
                   <div>
-                    <h2 className="text-[20px] sm:text-[24px] font-bold text-gray-900 mb-2">
+                    <h2 className="text-[20px] sm:text-[24px] font-medium text-gray-900 mb-2">
                       Personenbezogene Daten
                     </h2>
                     <p className="text-[14px] text-gray-500 mb-6">
@@ -640,7 +647,7 @@ export default function PflegepaketPage() {
                 {/* ═══ STEP 4: Confirmation ═══ */}
                 {step === 4 && (
                   <div>
-                    <h2 className="text-[20px] sm:text-[24px] font-bold text-gray-900 mb-2">
+                    <h2 className="text-[20px] sm:text-[24px] font-medium text-gray-900 mb-2">
                       Zusammenfassung &amp; Best{"\u00e4"}tigung
                     </h2>
                     <p className="text-[14px] text-gray-500 mb-6">
@@ -802,7 +809,7 @@ export default function PflegepaketPage() {
               <div className="space-y-5">
                 {/* Purple Leistungen card */}
                 <div className="bg-[#43358B] rounded-[20px] p-7 text-white">
-                  <h3 className="text-[24px] font-bold mb-6">Ihre Leistungen</h3>
+                  <h3 className="text-[24px] font-medium mb-6">Ihre Leistungen</h3>
                   <div className="space-y-5">
                     {[
                       {

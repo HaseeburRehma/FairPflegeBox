@@ -19,7 +19,7 @@ const navColumns = [
   {
     title: "Über uns",
     links: [
-      { label: "Häufige Fragen", href: "/#faq" },
+      { label: "Häufige Fragen", href: "/haeufige-fragen" },
       { label: "Berechtigung", href: "/berechtigung" },
       { label: "Pflichtangaben", href: "/pflichtangaben" },
       { label: "Unterst\u00fctzung", href: "/unterstuetzung" },
@@ -77,7 +77,7 @@ export default function Footer() {
           {/* ── Card 1: Newsletter ── */}
           <div className={`${cardClass} p-6 sm:p-8 flex flex-col justify-between`}>
             <div>
-              <h3 className="text-[24px] sm:text-[28px] font-bold text-white leading-snug mb-3">
+              <h3 className="text-[24px] sm:text-[28px] font-medium text-white leading-snug mb-3">
                 Bleiben Sie mit uns verbunden
               </h3>
               <p className="text-[13px] text-white/60 leading-relaxed mb-8">

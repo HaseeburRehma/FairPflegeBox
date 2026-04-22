@@ -25,7 +25,7 @@ export default function Mission() {
               </span>
             </div>
 
-            <h2 className="text-[28px] sm:text-[36px] xl:text-[42px] font-bold text-gray-900 leading-[1.1] mb-5">
+            <h2 className="text-[28px] sm:text-[36px] xl:text-[42px] font-medium text-gray-900 leading-[1.1] mb-5">
               Ältere Erwachsene mit Würde, Komfort und Pflege unterstützen
             </h2>
 

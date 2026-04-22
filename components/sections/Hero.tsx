@@ -50,14 +50,23 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100svh] overflow-hidden" aria-label="Startseite Hero">
-      {/* Background image — mobile: focus on right side (people), desktop: center */}
+      {/* Mobile background — elderly couple with FairPflegeBox box visible */}
+      <Image
+        src="/mission-aelteres-paar-fairpflegebox.jpg"
+        alt="Älteres Paar mit FairPflegeBox auf dem Sofa"
+        fill
+        priority
+        unoptimized
+        className="object-cover object-center sm:hidden"
+      />
+      {/* Desktop background — nurse supporting senior */}
       <Image
         src="/hero-nurse.jpg"
         alt="FairPflegeBox Pflegerin betreut Seniorin zu Hause"
         fill
         priority
         unoptimized
-        className="object-cover object-[70%_center] sm:object-center"
+        className="hidden sm:block object-cover object-center"
       />
 
       {/* Purple gradient overlay */}
@@ -69,7 +78,7 @@ export default function Hero() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-end">
             {/* Left: text + CTA */}
             <div className="max-w-lg">
-              <h1 className="text-[32px] sm:text-[40px] lg:text-[44px] xl:text-[52px] font-bold text-white leading-[1.08] mb-5">
+              <h1 className="text-[32px] sm:text-[40px] lg:text-[44px] xl:text-[52px] font-medium text-white leading-[1.08] mb-5">
                 <span className="block whitespace-nowrap">Qualitäts-</span>
                 <span className="block whitespace-nowrap">Pflegeprodukte</span>
                 <span className="block whitespace-nowrap">bequem geliefert</span>

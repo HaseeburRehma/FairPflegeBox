@@ -91,7 +91,7 @@ export default function Testimonials() {
               </span>
             </div>
 
-            <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] xl:text-[50px] font-bold text-white leading-[1.08]">
+            <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] xl:text-[50px] font-medium text-white leading-[1.08]">
               Was unsere<br className="hidden sm:block" />{" "}
               Kunden sagen
             </h2>

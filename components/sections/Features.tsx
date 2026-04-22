@@ -81,7 +81,7 @@ export default function Features() {
             </div>
           </div>
 
-          <h2 className="text-[28px] sm:text-[36px] lg:text-[44px] font-bold text-gray-900 leading-[1.15] mb-4">
+          <h2 className="text-[28px] sm:text-[36px] lg:text-[44px] font-medium text-gray-900 leading-[1.15] mb-4">
             Monatliche Lieferung von{" "}
             <span className="inline sm:block">Pflegeprodukten einfach gestalten</span>
           </h2>
@@ -187,7 +187,7 @@ export default function Features() {
                   className="object-contain w-full h-full"
                 />
               </div>
-              <h3 className="text-[18px] sm:text-[20px] font-bold text-gray-900 leading-snug mb-1.5">
+              <h3 className="text-[18px] sm:text-[20px] font-medium text-gray-900 leading-snug mb-1.5">
                 Keine<br className="hidden sm:block" /> Papierformulare
               </h3>
               <p className="text-[13px] text-gray-400 font-medium">
@@ -207,7 +207,7 @@ export default function Features() {
 
             {/* ── Bottom: Purple card spanning both columns on sm+ ── */}
             <div className="sm:col-span-2 bg-[#43358B] rounded-3xl p-6 sm:p-8 flex flex-col gap-4">
-              <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-white leading-snug">
+              <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-medium text-white leading-snug">
                 Flexible Produkte,<br className="hidden sm:block" /> monatlich geliefert
               </h3>
               <p className="text-[13.5px] sm:text-[14px] text-white/65 leading-relaxed max-w-lg">

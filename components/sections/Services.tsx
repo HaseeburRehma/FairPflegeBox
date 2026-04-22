@@ -71,7 +71,7 @@ export default function Services() {
             </div>
           </div>
 
-          <h2 className="text-[32px] sm:text-[40px] font-bold text-gray-900 mb-3 leading-tight">
+          <h2 className="text-[32px] sm:text-[40px] font-medium text-gray-900 mb-3 leading-tight">
             Unsere Vorteile auf einen Blick
           </h2>
           <p className="text-[15px] text-gray-500 leading-relaxed max-w-lg mx-auto">
@@ -99,7 +99,7 @@ export default function Services() {
 
               {/* Body */}
               <div className="flex flex-col gap-3 flex-1 px-1">
-                <h3 className="font-bold text-gray-900 text-[18px] leading-snug">
+                <h3 className="font-medium text-gray-900 text-[18px] leading-snug">
                   {service.title}
                 </h3>
                 <p className="text-[14px] text-gray-500 leading-relaxed flex-1">

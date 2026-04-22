@@ -5,12 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "Startseite", href: "/" },
+  { label: "Über uns", href: "/ueber-uns" },
   { label: "Pflegepaket bestellen", href: "/pflegepaket" },
   { label: "Produkte", href: "/produkte" },
   { label: "So funktioniert es", href: "/so-funktioniert-es" },
   { label: "Pflegebedarf", href: "/pflegebedarf" },
-  { label: "Häufige Fragen", href: "/#faq" },
+  { label: "Häufige Fragen", href: "/haeufige-fragen" },
 ];
 
 export default function Header() {
@@ -102,7 +102,7 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center">
             <Link
-              href="/bestellen"
+              href="/kontakt"
               className="inline-flex items-center gap-3 bg-[#009CB4] text-white font-semibold text-[13px] rounded-full pl-5 pr-1.5 py-1.5 hover:bg-[#007f95] transition-all duration-200 shadow-md shadow-[#009CB4]/25 hover:shadow-lg hover:shadow-[#009CB4]/30 active:scale-[0.97]"
             >
               Jetzt bewerben
@@ -161,7 +161,7 @@ export default function Header() {
             ))}
             <div className="pt-2 pb-1">
               <Link
-                href="/bestellen"
+                href="/kontakt"
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center gap-3 w-full bg-[#009CB4] text-white font-semibold text-sm rounded-full pl-5 pr-2 py-2.5 hover:bg-[#007f95] transition-colors"
               >

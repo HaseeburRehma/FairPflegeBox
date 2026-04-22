@@ -144,11 +144,19 @@ export default function SoFunktioniertEsPage() {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#43358B]/85 via-[#43358B]/75 to-[#352878]/90" />
+        {/* Subtle base tint + brand gradient fading from clear top to solid purple bottom */}
+        <div className="absolute inset-0 bg-[#43358B]/25" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(67, 53, 139, 0) 0%, #43358B 100%)",
+          }}
+        />
 
         <div className="container mx-auto px-5 sm:px-6 xl:px-12 max-w-[1280px] relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-[32px] sm:text-[42px] xl:text-[54px] font-bold text-white leading-[1.08] mb-5">
+            <h1 className="text-[32px] sm:text-[42px] xl:text-[54px] font-medium text-white leading-[1.08] mb-5">
               Von der Bewerbung bis
               <br className="hidden sm:block" /> zu Ihnen nach Hause
             </h1>
@@ -238,7 +246,7 @@ export default function SoFunktioniertEsPage() {
               </div>
 
               {/* Title */}
-              <h2 className="text-[22px] sm:text-[26px] font-bold text-gray-900 leading-snug mb-3">
+              <h2 className="text-[22px] sm:text-[26px] font-medium text-gray-900 leading-snug mb-3">
                 {current.title}
               </h2>
 
@@ -330,7 +338,7 @@ export default function SoFunktioniertEsPage() {
               </div>
 
               {/* Heading */}
-              <h2 className="text-[30px] sm:text-[38px] lg:text-[44px] font-bold text-gray-900 leading-[1.1] mb-7 sm:mb-8 max-w-md">
+              <h2 className="text-[30px] sm:text-[38px] lg:text-[44px] font-medium text-gray-900 leading-[1.1] mb-7 sm:mb-8 max-w-md">
                 Ihre Vorteile auf einen Blick
               </h2>
 
@@ -446,7 +454,7 @@ export default function SoFunktioniertEsPage() {
             />
             <div className="relative z-10 flex flex-col justify-end h-full min-h-[360px] sm:min-h-[420px] lg:min-h-[460px] p-6 sm:p-10 lg:p-14">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-end">
-                <h2 className="text-[26px] sm:text-[34px] lg:text-[40px] font-bold text-white leading-[1.1]">
+                <h2 className="text-[26px] sm:text-[34px] lg:text-[40px] font-medium text-white leading-[1.1]">
                   Bereit f\u00fcr Ihre<br /> kostenlose Pflegebox?
                 </h2>
                 <div className="flex flex-col items-start gap-5 md:max-w-[360px] md:justify-self-end">
@@ -530,13 +538,13 @@ function FAQSection() {
               </span>
             </div>
 
-            <h2 className="text-[30px] sm:text-[38px] lg:text-[44px] font-bold text-gray-900 leading-[1.1] mb-8 max-w-md">
+            <h2 className="text-[30px] sm:text-[38px] lg:text-[44px] font-medium text-gray-900 leading-[1.1] mb-8 max-w-md">
               Fragen? Wir sind hier um zu helfen
             </h2>
 
             {/* Helper card */}
             <div className="bg-[#F5F4F8] rounded-2xl p-6 max-w-md">
-              <h3 className="text-[16px] font-bold text-gray-900 mb-1.5">
+              <h3 className="text-[16px] font-medium text-gray-900 mb-1.5">
                 Haben Sie noch Fragen?
               </h3>
               <p className="text-[13px] text-gray-500 mb-5 leading-relaxed">

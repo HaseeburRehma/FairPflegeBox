@@ -32,7 +32,7 @@ export default function CTABanner() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-end">
 
               {/* Left: Heading */}
-              <h2 className="text-[26px] sm:text-[36px] lg:text-[42px] font-bold text-white leading-[1.1]">
+              <h2 className="text-[26px] sm:text-[36px] lg:text-[42px] font-medium text-white leading-[1.1]">
                 Ihre Pflegebox kann<br />jeden Monat ankommen
               </h2>
 
