@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { products, type Product } from "@/lib/products";
 
 export const metadata: Metadata = {
   title:
@@ -33,190 +34,15 @@ export const metadata: Metadata = {
 
 /* ════════════════════════════════════
    PRODUCT DATA
+   ════════════════════════════════════
+   Products live in `/lib/products.ts` so that detail pages at
+   `/produkte/[slug]` share the same source of truth.
    ════════════════════════════════════ */
 
-type Product = {
-  id: string;
-  title: string;
-  intro: string;
-  pflichtInfo?: boolean;
-  bullets: string[];
-  image: string;
-  imageAlt: string;
-  href: string;
-};
-
-/**
- * Product data source.
- *
- * ▸ STATIC (default) — the page renders the `products` array below.
- * ▸ SANITY — once you've run `npm install` and filled in the Sanity env
- *   vars in `.env.local`, replace the `getProducts` body with:
- *
- *     import { sanityClient } from "@/sanity/lib/client";
- *     import { productsQuery } from "@/sanity/lib/queries";
- *     const rows = await sanityClient.fetch(productsQuery);
- *     return rows?.length ? rows.map(mapSanityProduct) : products;
- *
- *   (full copy-paste block in SETUP_CMS.md). The rest of the page
- *   stays untouched.
- */
 async function getProducts(): Promise<Product[]> {
   return products;
 }
 
-const products: Product[] = [
-  {
-    id: "peha-soft",
-    title: "Einmalhandschuhe: Peha-soft® puderfrei",
-    intro:
-      "Einmalhandschuhe sind für alltägliche Pflegesituationen geeignet und helfen, Infektionen zu vermeiden.",
-    bullets: [
-      "Nicht-sterile Handschuhe zum Selbstschutz und zum Schutz anderer",
-      "Reißfest und puderfrei",
-      "Ideal für: Wechseln von Inkontinenzprodukten und Verbänden, Körper- und Mundpflege",
-    ],
-    image: "/products/peha-soft-vinyl.png",
-    imageAlt: "Peha-soft vinyl Einmalhandschuhe Verpackung",
-    href: "/pflegepaket",
-  },
-  {
-    id: "sterillium",
-    title: "Händedesinfektionsmittel: Sterillium®",
-    intro:
-      "Sterillium® – das klassische alkoholische Händedesinfektionsmittel mit Hautpflegekomplex.",
-    pflichtInfo: true,
-    bullets: [
-      "Flüssiges Produkt mit sehr guter Hautverträglichkeit",
-      "Wirksam gegen viele Erreger wie Coronaviren, Hefen und Bakterien.",
-      "Ideal für: Händedesinfektion vor dem Wechseln von Inkontinenzprodukten oder Verbänden, während der Katheterpflege",
-    ],
-    image: "/products/sterillium-bottle.png",
-    imageAlt: "Sterillium Händedesinfektionsmittel 500 ml Flasche",
-    href: "/pflichtangaben",
-  },
-  {
-    id: "sterillium-home",
-    title: "Oberflächen-Desinfektionstücher: Sterillium® home",
-    intro:
-      "Sterillium® plastikfreie Tücher für die schnelle Oberflächendesinfektion.**",
-    pflichtInfo: true,
-    bullets: [
-      "Einfach und schnell zu verwenden.",
-      "Geeignet für empfindliche Oberflächen",
-      "Desinfiziert und reinigt",
-      "Wirksam gegen viele Erreger wie Coronaviren, Hefen und Bakterien.",
-      "Ideal für: Desinfizieren von Oberflächen, z.B. Toilettensitzen und Bettgestellen",
-    ],
-    image: "/products/sterillium-home-wipes.png",
-    imageAlt: "Sterillium home Desinfektionstücher Packung",
-    href: "/pflichtangaben",
-  },
-  {
-    id: "bacillol",
-    title: "Einmalhandschuhe: Peha-soft® puderfrei",
-    intro:
-      "Flüssiges Bacillol® Produkt zur schnellen Desinfektion von Oberflächen.**",
-    pflichtInfo: true,
-    bullets: [
-      "Gebrauchsfertige Lösung, kann ohne Handschuhe aufgetragen werden",
-      "Wirksam gegen viele Erreger wie Coronaviren, Hefen und Bakterien.",
-      "Aldehyd-, farbstoff- und parfümfrei",
-      "Ideal für: Desinfizieren von Oberflächen, z.B. im Badezimmer",
-    ],
-    image: "/products/bacillol-sensitive.png",
-    imageAlt: "Bacillol Sensitive Tissues Desinfektionstücher Packung",
-    href: "/pflichtangaben",
-  },
-  {
-    id: "molicare-bed-mat",
-    title: "Einmalhandschuhe: Peha-soft® puderfrei",
-    intro:
-      "Flüssiges Bacillol® Produkt zur schnellen Desinfektion von Oberflächen.**",
-    pflichtInfo: true,
-    bullets: [
-      "Gebrauchsfertige Lösung, kann ohne Handschuhe aufgetragen werden",
-      "Wirksam gegen viele Erreger wie Coronaviren, Hefen und Bakterien.",
-      "Aldehyd-, farbstoff- und parfümfrei",
-      "Ideal für: Desinfizieren von Oberflächen, z.B. im Badezimmer",
-    ],
-    image: "/products/molicare-bed-mat.png",
-    imageAlt: "MoliCare Premium Bed Mat Bettschutzeinlagen Packung",
-    href: "/pflichtangaben",
-  },
-  {
-    id: "foliodress-mask",
-    title: "Medizinische Gesichtsmasken: Foliodress® Mundschutz",
-    intro:
-      "Gesichtsmasken (\u201echirurgische Masken\u201c) aus dünnen Schichten von Vliesstoff helfen, andere vor Infektionen zu schützen.",
-    bullets: [
-      "Gesichtsmasken aus hypoallergenem Vliesstoff",
-      "Mit Nasenbügel und elastischen Ohrschlaufen",
-      "Helfen, Infektionen zu verhindern, die durch Tröpfchen übertragen werden",
-      "Ideal für: Wundversorgung",
-    ],
-    image: "/products/foliodress-mask.png",
-    imageAlt: "Foliodress Mask Loop Type IIR Mundschutz Verpackung",
-    href: "/pflegepaket",
-  },
-  {
-    id: "ffp2",
-    title: "FFP2-Masken: Foliodress® Maske FFP2",
-    intro:
-      "FFP2-Masken aus mehrlagigem Vliesstoff helfen, Sie und andere vor Infektionen zu schützen.",
-    bullets: [
-      "Partikelfiltrierende Halbmaske aus mehrlagigem, dicht gewebtem Vliesstoff",
-      "Mit Nasenbügel und elastischen Ohrschlaufen",
-      "Helfen, Infektionen zu verhindern, die durch Tröpfchen und Aerosole übertragen werden.",
-      "Besonders geeignet, wenn die zu pflegende Person beispielsweise erkältet ist.",
-    ],
-    image: "/products/foliodress-ffp2.png",
-    imageAlt: "Foliodress Mask Loop FFP2 Atemschutz-Maske Verpackung",
-    href: "/pflegepaket",
-  },
-  {
-    id: "vala-comfort",
-    title: "Einmal-Schutzschürzen: Vala®Comfort Einwegschürze",
-    intro:
-      "Wasserdichte Schürzen halten die Kleidung des Pflegepersonals sauber und trocken.",
-    bullets: [
-      "Einwegschürzen aus reißfestem, wasserdichtem Material (135 x 57 cm)",
-      "Schützen die Kleidung vor Feuchtigkeit und Schmutz",
-      "Mit Bändern im Rücken zum Schließen",
-      "Ideal für: Wechseln von Inkontinenzprodukten und Verbänden, Körper- und Intimpflege",
-    ],
-    image: "/products/valacomfort-apron.png",
-    imageAlt: "ValaComfort Einwegschürzen Packung",
-    href: "/pflegepaket",
-  },
-  {
-    id: "vala-fit",
-    title: "Einmal-Schutzlätzchen: Vala®Fit haftende Schutzlätzchen",
-    intro:
-      "Schutzlätzchen schützen die Kleidung der zu pflegenden Person, z.B. während der Mahlzeiten.",
-    bullets: [
-      "Einweg-Lätzchen mit Auffangtasche (37 x 65 cm)",
-      "Schnell dank des selbstklebenden Streifens anzubringen",
-      "Fangen Essensreste und Flüssigkeiten auf",
-      "Können auch als Mundlätzchen verwendet werden",
-      "Ideal für: Essen und Trinken am Tisch oder im Krankenhausbett",
-    ],
-    image: "/products/valafit-bib.png",
-    imageAlt: "Vala Fit haftende Schutzlätzchen Packung",
-    href: "/pflegepaket",
-  },
-  {
-    id: "bettauflage",
-    title:
-      "Ihr Extra für die 42 €: Waschbare Bettauflagen kostenlos enthalten",
-    intro:
-      "Unabhängig von den in Ihrem Curabox-Pflegepaket enthaltenen Produkten können Sie wiederverwendbare Bettauflagen anfordern. Diese rutschfesten Bettauflagen aus weichem Stoff (75 x 85 cm) nehmen noch mehr Flüssigkeit auf und können bis zu 300 Mal bei 95° Celsius gewaschen werden. Dies reduziert Abfall. Je nach Ihrem Anbieter der langfristigen Pflegeversicherung können Sie zusätzlich zu Ihrer Curabox-Pflege bis zu vier waschbare Bettauflagen pro Jahr für 0 € erhalten.",
-    bullets: [],
-    image: "/products/washable-bedpad.png",
-    imageAlt: "Waschbare Bettauflage in Blau und Türkis",
-    href: "/pflegepaket",
-  },
-];
 
 /* ════════════════════════════════════
    PRODUCT CARD
@@ -288,10 +114,10 @@ function ProductCard({ product }: { product: Product }) {
       {/* CTA — sticks to bottom */}
       <div className="mt-auto px-1 pb-1">
         <Link
-          href={product.href}
+          href={`/produkte/${product.slug}`}
           className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#43358B] border border-[#D6D1EC] rounded-full px-5 py-2.5 hover:bg-[#43358B] hover:text-white hover:border-[#43358B] transition-all duration-200 group"
         >
-          Produkte erkunden
+          Produkt erkunden
           <svg
             className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5"
             fill="none"

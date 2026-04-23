@@ -402,7 +402,7 @@ export default function SoFunktioniertEsPage() {
 
               {/* CTA button */}
               <Link
-                href="/pflegepaket"
+                href="/jetzt-bewerben"
                 className="inline-flex items-center gap-3 bg-[#009CB4] text-white font-semibold text-[14px] rounded-full pl-6 pr-2 py-2 hover:bg-[#007f95] transition-colors shadow-lg shadow-[#009CB4]/25"
               >
                 Jetzt bewerben
@@ -551,7 +551,7 @@ function FAQSection() {
                 Wir sind hier, um den Prozess einfach zu gestalten.
               </p>
               <Link
-                href="/kontakt"
+                href="/jetzt-bewerben"
                 className="inline-flex items-center gap-2.5 bg-[#009CB4] text-white font-semibold text-[13px] rounded-full pl-5 pr-1.5 py-1.5 hover:bg-[#007f95] transition-colors"
               >
                 E-Mail senden

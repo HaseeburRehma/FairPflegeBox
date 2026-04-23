@@ -27,7 +27,7 @@ const services = [
     image: "/schnelle-einfache-bestellung.png",
     imageAlt: "Seniorin bestellt FairPflegeBox einfach online am Laptop",
     cta: "Jetzt bewerben",
-    href: "/bestellen",
+    href: "/jetzt-bewerben",
   },
   {
     title: "Stressfreier Prozess",

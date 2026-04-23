@@ -153,7 +153,7 @@ export default function HowItWorks() {
 
             {/* CTA Button */}
             <Link
-              href="/bestellen"
+              href="/jetzt-bewerben"
               className="inline-flex items-center gap-3 bg-[#009CB4] text-white font-semibold text-[14px] rounded-full pl-6 pr-2 py-2 hover:bg-[#007f95] transition-colors shadow-lg shadow-[#009CB4]/30"
             >
               Jetzt bewerben

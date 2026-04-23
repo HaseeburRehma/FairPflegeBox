@@ -715,7 +715,7 @@ export default function PflegepaketPage() {
                         <span className="text-[13px] text-gray-500 leading-relaxed">
                           Ich best{"\u00e4"}tige die Richtigkeit meiner Angaben und
                           stimme der Verarbeitung meiner Daten gem{"\u00e4"}{"\u00df"} der{" "}
-                          <Link href="/datenschutz" className="text-[#009CB4] hover:underline">
+                          <Link href="/pflichtangaben" className="text-[#009CB4] hover:underline">
                             Datenschutzerkl{"\u00e4"}rung
                           </Link>{" "}
                           zu. Ich beauftrage FairPflegeBox, den Antrag bei meiner

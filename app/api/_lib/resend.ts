@@ -1,8 +1,5 @@
-/**
- * Thin wrapper around the Resend HTTP API.
- * We avoid the `resend` npm package so the project stays dependency-free.
- * Docs: https://resend.com/docs/api-reference/emails/send-email
- */
+
+import nodemailer, { type Transporter } from "nodemailer";
 
 type SendArgs = {
   from?: string;
@@ -12,44 +9,74 @@ type SendArgs = {
   replyTo?: string;
 };
 
-export async function sendEmail({ from, to, subject, html, replyTo }: SendArgs) {
-  const key = process.env.RESEND_API_KEY;
-  if (!key) {
-    return { ok: false as const, error: "RESEND_API_KEY is not configured" };
+/** Lazily created so dev-hot-reload doesn't open dozens of SMTP pools. */
+let cachedTransporter: Transporter | null = null;
+
+function getTransporter(): Transporter | null {
+  if (cachedTransporter) return cachedTransporter;
+
+  const host = process.env.SMTP_HOST;
+  const port = Number(process.env.SMTP_PORT || "465");
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASSWORD;
+
+  if (!host || !user || !pass) {
+    return null;
   }
 
-  const fromAddress =
-    from || process.env.CONTACT_FROM_EMAIL || "haseebtylo@gmail.com";
+  cachedTransporter = nodemailer.createTransport({
+    host,
+    port,
+    secure: port === 465,
+    auth: { user, pass },
 
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${key}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
+    tls: { minVersion: "TLSv1.2" },
+  });
+
+  return cachedTransporter;
+}
+
+export async function sendEmail({
+  from,
+  to,
+  subject,
+  html,
+  replyTo,
+}: SendArgs) {
+  const transporter = getTransporter();
+
+  if (!transporter) {
+    return {
+      ok: false as const,
+      error:
+        "SMTP is not configured. Set SMTP_HOST, SMTP_USER and SMTP_PASSWORD in .env.local.",
+    };
+  }
+
+  // Resolution order for the "From" address:
+  //   1) explicit arg
+  //   2) CONTACT_FROM_EMAIL env var
+  //   3) fall back to the SMTP user
+  const fromAddress =
+    from ||
+    process.env.CONTACT_FROM_EMAIL ||
+    process.env.SMTP_USER ||
+    "info@fairpflegebox.de";
+
+  try {
+    const info = await transporter.sendMail({
       from: fromAddress,
       to: Array.isArray(to) ? to : [to],
       subject,
       html,
-      ...(replyTo ? { reply_to: replyTo } : {}),
-    }),
-    // Resend sometimes takes a moment — give it time.
-    cache: "no-store",
-  });
+      ...(replyTo ? { replyTo } : {}),
+    });
 
-  if (!res.ok) {
-    let detail = "";
-    try {
-      detail = JSON.stringify(await res.json());
-    } catch {
-      detail = await res.text();
-    }
-    return { ok: false as const, error: `Resend ${res.status}: ${detail}` };
+    return { ok: true as const, id: info.messageId };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    return { ok: false as const, error: `SMTP send failed: ${message}` };
   }
-
-  const data = (await res.json()) as { id?: string };
-  return { ok: true as const, id: data.id };
 }
 
 export function escapeHtml(input: string): string {

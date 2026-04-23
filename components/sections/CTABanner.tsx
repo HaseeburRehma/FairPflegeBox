@@ -43,7 +43,7 @@ export default function CTABanner() {
                   essentielle Pflegeprodukte direkt nach Hause.
                 </p>
                 <Link
-                  href="/bestellen"
+                  href="/jetzt-bewerben"
                   className="inline-flex items-center gap-3 bg-[#009CB4] text-white font-semibold text-[14px] rounded-full pl-6 pr-2 py-2 hover:bg-[#007f95] transition-colors shadow-lg shadow-black/30"
                 >
                   Jetzt bewerben

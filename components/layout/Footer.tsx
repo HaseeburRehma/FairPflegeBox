@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import TypingCredit from "@/components/ui/TypingCredit";
 
 const navColumns = [
   {
@@ -13,16 +14,18 @@ const navColumns = [
       { label: "Produkte", href: "/produkte" },
       { label: "Pflegebedarf", href: "/pflegebedarf" },
       { label: "So funktioniert", href: "/so-funktioniert-es" },
-      { label: "Kontakt", href: "/kontakt" },
+      { label: "Jetzt bewerben", href: "/jetzt-bewerben" },
     ],
   },
   {
     title: "Über uns",
     links: [
       { label: "Häufige Fragen", href: "/haeufige-fragen" },
-      { label: "Berechtigung", href: "/berechtigung" },
+      { label: "Berechtigung", href: "/pflegebedarf" },
       { label: "Pflichtangaben", href: "/pflichtangaben" },
-      { label: "Unterst\u00fctzung", href: "/unterstuetzung" },
+      { label: "Impressum", href: "/impressum" },
+      { label: "Datenschutz", href: "/datenschutz" },
+      { label: "Unterst\u00fctzung", href: "/jetzt-bewerben" },
     ],
   },
 ];
@@ -163,17 +166,36 @@ export default function Footer() {
                   Kontakt
                 </h4>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-white/[0.10] flex items-center justify-center flex-shrink-0">
+                  {/* Address */}
+                  <div className="flex items-start gap-3">
+                    <span className="w-8 h-8 rounded-full bg-white/[0.10] flex items-center justify-center flex-shrink-0 mt-0.5">
                       <svg className="w-3.5 h-3.5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </span>
-                    <span className="text-[13px] text-white/75">
-                      4296 Coplin Avenue, Phoenix
+                    <span className="text-[13px] text-white/75 leading-relaxed">
+                      FairPflegeBox GbR, Reisholzer Werftstraße&nbsp;76,
+                      40589&nbsp;Düsseldorf, Deutschland
                     </span>
                   </div>
+
+                  {/* Phone */}
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-white/[0.10] flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3.5 h-3.5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </span>
+                    <Link
+                      href="tel:+4917695554394"
+                      className="text-[13px] text-white/75 hover:text-white transition-colors"
+                    >
+                      +49 176 95554394
+                    </Link>
+                  </div>
+
+                  {/* Email */}
                   <div className="flex items-center gap-3">
                     <span className="w-8 h-8 rounded-full bg-white/[0.10] flex items-center justify-center flex-shrink-0">
                       <svg className="w-3.5 h-3.5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,10 +203,10 @@ export default function Footer() {
                       </svg>
                     </span>
                     <Link
-                      href="mailto:chat@carex.com"
-                      className="text-[13px] text-white/75 hover:text-white transition-colors"
+                      href="mailto:info@fairpflegebox.de"
+                      className="text-[13px] text-white/75 hover:text-white transition-colors break-all"
                     >
-                      chat@carex.com
+                      info@fairpflegebox.de
                     </Link>
                   </div>
                 </div>
@@ -243,6 +265,11 @@ export default function Footer() {
           <p className="text-[12px] text-white/40">
             © {new Date().getFullYear()} FairPflegeBox. Alle Rechte vorbehalten.
           </p>
+        </div>
+
+        {/* ══════ TYPING CREDIT ══════ */}
+        <div className="pt-5">
+          <TypingCredit />
         </div>
       </div>
     </footer>

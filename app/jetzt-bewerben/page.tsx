@@ -167,11 +167,12 @@ export default function KontaktPage() {
         <div className="container mx-auto px-5 sm:px-6 xl:px-12 max-w-[1280px] relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-[32px] sm:text-[44px] xl:text-[56px] font-medium text-white leading-[1.08] mb-5">
-              Wir sind für Sie da
+              Jetzt bewerben
             </h1>
             <p className="text-[15px] sm:text-[17px] text-white/85 leading-relaxed max-w-xl mx-auto mb-7">
-              Haben Sie Fragen? Unser Team hilft Ihnen gerne weiter – per
-              Telefon, E-Mail oder Kontaktformular.
+              Sichern Sie sich Ihre kostenlose FairPflegeBox. Füllen Sie das
+              Formular aus und wir kümmern uns um den Rest – per Telefon,
+              E-Mail oder direkt online.
             </p>
 
             <div className="inline-flex items-center gap-2.5 bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-5 py-2.5 shadow-[0_8px_30px_rgba(0,0,0,0.15)]">
@@ -337,7 +338,7 @@ export default function KontaktPage() {
                     />
                     <span className="text-[13px] text-gray-600 leading-relaxed">
                       Ich habe die{" "}
-                      <Link href="/datenschutz" className="text-[#009CB4] hover:underline">
+                      <Link href="/pflichtangaben" className="text-[#009CB4] hover:underline">
                         Datenschutzrichtlinie
                       </Link>{" "}
                       gelesen. Ich stimme zu, dass meine Informationen für

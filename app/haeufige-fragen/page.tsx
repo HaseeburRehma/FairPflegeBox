@@ -54,7 +54,7 @@ const categories: Category[] = [
     faqs: [
       {
         q: "Wer hat Anspruch auf kostenlose Pflegehilfsmittel?",
-        a: "Jede Person mit einem anerkannten Pflegegrad (1–5), die zu Hause von Angehörigen, Bekannten oder ehrenamtlichen Helfern gepflegt wird, hat Anspruch auf Pflegehilfsmittel zum Verbrauch im Wert von bis zu 42 € pro Monat.",
+        a: "Jede Person mit einem anerkannten Pflegegrad (1–5), die zu Hause versorgt wird, hat gemäß § 40 Abs. 2 SGB XI Anspruch auf Pflegehilfsmittel zum Verbrauch im Wert von bis zu 42 € pro Monat – vollständig bezahlt durch die gesetzliche Pflegekasse.",
       },
       {
         q: "Welche Pflegegrade sind berechtigt?",
@@ -147,28 +147,36 @@ const categories: Category[] = [
     ],
   },
   {
-    title: "Über FairPflegebox",
+    title: "Über FairPflegeBox",
     icon: InfoIcon,
     faqs: [
       {
-        q: "Wer steht hinter FairPflegebox?",
-        a: "FairPflegeBox ist ein deutsches Familienunternehmen mit Sitz in Berlin, spezialisiert auf die einfache und faire Versorgung mit Pflegehilfsmitteln zu Hause.",
+        q: "Wer steht hinter FairPflegeBox?",
+        a: "FairPflegeBox ist eine deutsche GbR mit Sitz in der Reisholzer Werftstraße 76, 40589 Düsseldorf. Vertretungsberechtigte Gesellschafter sind Ibrahim Botnifen und Azzeddine Essafi. Wir haben uns auf die einfache und faire Versorgung mit Pflegehilfsmitteln zum Verbrauch nach § 40 Abs. 2 SGB XI spezialisiert.",
       },
       {
         q: "Sind die Produkte getestet und genehmigt?",
-        a: "Ja. Alle Produkte stammen von namhaften Herstellern (z. B. Hartmann, Sterillium, MoliCare) und entsprechen den Qualitätsstandards der Pflegekassen.",
+        a: "Ja. Alle Produkte stammen von namhaften Herstellern (z. B. Hartmann, Sterillium, MoliCare) und sind als Pflegehilfsmittel zum Verbrauch nach § 40 Abs. 2 SGB XI zugelassen.",
       },
       {
         q: "Wie sicher sind meine Daten?",
-        a: "Ihre Daten werden SSL-verschlüsselt übertragen, in Deutschland gespeichert und ausschließlich zur Bearbeitung Ihres Antrags verwendet – DSGVO-konform.",
+        a: "Ihre Daten werden SSL-/TLS-verschlüsselt übertragen und ausschließlich zur Bearbeitung Ihres Antrags sowie zur Abrechnung mit Ihrer Pflegekasse verwendet. Die Verarbeitung erfolgt DSGVO-konform auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO und Art. 9 Abs. 2 lit. h DSGVO i. V. m. § 40 Abs. 2 SGB XI. Details finden Sie in unserer Datenschutzerklärung.",
       },
       {
-        q: "Wie kann ich FairPflegebox kontaktieren?",
-        a: "Per E-Mail über unser Kontaktformular oder telefonisch unter 0800 123 456 78 (Mo–Fr 8:00–18:00 Uhr, kostenlos aus dem deutschen Fest- und Mobilfunknetz).",
+        q: "An wen werden meine Daten weitergegeben?",
+        a: "Ihre Antrags- und Gesundheitsdaten (Pflegegrad, Versichertennummer) werden ausschließlich an Ihre gesetzliche Pflegekasse übermittelt, soweit dies für die Abrechnung nach §§ 40, 94 SGB XI erforderlich ist. Ohne Ihre Einwilligung geben wir keine Daten an Dritte weiter.",
+      },
+      {
+        q: "Wie kann ich FairPflegeBox kontaktieren?",
+        a: "Sie erreichen uns per E-Mail an info@fairpflegebox.de oder telefonisch unter +49 176 95554394. Auf Anfragen über das Kontaktformular antworten wir in der Regel innerhalb von 24 Stunden.",
       },
       {
         q: "Was passiert, wenn es Probleme mit der Lieferung gibt?",
-        a: "Melden Sie sich einfach bei unserem Support – wir klären das Problem unbürokratisch und sorgen dafür, dass Sie schnellstmöglich versorgt sind.",
+        a: "Schreiben Sie uns einfach eine kurze Nachricht an info@fairpflegebox.de oder rufen Sie uns an – wir klären das Problem unbürokratisch und sorgen dafür, dass Sie schnellstmöglich versorgt sind.",
+      },
+      {
+        q: "Welches Widerspruchs- und Auskunftsrecht habe ich?",
+        a: "Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten Daten sowie auf Berichtigung, Löschung oder Einschränkung der Verarbeitung. Widersprüche und Anfragen richten Sie bitte an info@fairpflegebox.de. Bei Beschwerden können Sie sich außerdem an die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen wenden.",
       },
     ],
   },
