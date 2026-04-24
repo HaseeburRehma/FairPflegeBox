@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const slides = [
   {
-    stat: "1.300+",
+    stat: "300+",
     title: "Pflegeboxen geliefert",
     desc: "FairPflegeBox hilft Haushalten, regelmäßig essentielle Pflegeprodukte zu erhalten, wodurch die tägliche Bestellung einfacher und zuverlässiger wird.",
     image: "/pflegeboxen-geliefert.png",

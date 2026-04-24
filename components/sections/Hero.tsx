@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const slides = [
   {
-    stat: "1.300+",
+    stat: "300+",
     label: "Unterstützte Personen",
     sub: "Für Familien und Einzelpersonen.",
   },
