@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung | FairPflegeBox",
@@ -44,8 +43,7 @@ export default function DatenschutzPage() {
       </section>
 
       {/* ══════ CONTENT ══════ */}
-      <ScrollReveal>
-        <section className="bg-white py-16 sm:py-20 lg:py-24">
+      <section className="bg-white py-16 sm:py-20 lg:py-24">
           <div className="container mx-auto px-5 sm:px-6 xl:px-12 max-w-[820px]">
             <div className="prose-legal">
 
@@ -922,7 +920,6 @@ export default function DatenschutzPage() {
             </div>
           </div>
         </section>
-      </ScrollReveal>
     </main>
   );
 }
