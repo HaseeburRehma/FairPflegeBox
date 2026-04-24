@@ -138,11 +138,11 @@ export default function SoFunktioniertEsPage() {
       {/* ══════ HERO — same photo + purple overlay as Pflegepaket ══════ */}
       <section className="relative pt-36 sm:pt-44 lg:pt-52 pb-24 sm:pb-32 lg:pb-40 overflow-hidden">
         <Image
-          src="/senior-fairpflegebox-wohnzimmer.png"
+          src="/hero-kitchen.jpg"
           alt="Älterer Herr mit FairPflegeBox im Wohnzimmer"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
         {/* Subtle base tint + brand gradient fading from clear top to solid purple bottom */}
         <div className="absolute inset-0 bg-[#43358B]/25" />
@@ -421,7 +421,7 @@ export default function SoFunktioniertEsPage() {
                   src="/pflegebox-mutter-tochter-gluecklich.png"
                   alt="Gl\u00fcckliche Mutter und Tochter mit FairPflegeBox Pflegehilfsmitteln"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                 />
               </div>
             </ScrollReveal>
@@ -443,7 +443,7 @@ export default function SoFunktioniertEsPage() {
               src="/pflegebox-seniorin-betreuerin-garten.png"
               alt="Seniorin und Betreuerin freuen sich \u00fcber FairPflegeBox im Garten"
               fill
-              className="object-cover object-center"
+              className="object-cover object-top"
             />
             <div
               className="absolute inset-0"

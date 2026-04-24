@@ -16,6 +16,8 @@ type Method = {
   note: string;
   icon: ReactNode;
   highlight?: "teal" | "dark";
+  /** If set, the value becomes a clickable link (tel: / mailto: / https:) */
+  href?: string;
 };
 
 const contactMethods: Method[] = [
@@ -25,6 +27,7 @@ const contactMethods: Method[] = [
     value: "+49 176 95554394",
     note: "Rückruf auf Wunsch möglich",
     highlight: "teal",
+    href: "tel:+4917695554394",
     icon: (
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
@@ -42,6 +45,7 @@ const contactMethods: Method[] = [
     value: "info@fairpflegebox.de",
     note: "Antwort innerhalb von 24 Stunden.",
     highlight: "teal",
+    href: "mailto:info@fairpflegebox.de",
     icon: (
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
@@ -149,11 +153,11 @@ export default function KontaktPage() {
       {/* ══════ HERO ══════ */}
       <section className="relative pt-36 sm:pt-44 lg:pt-52 pb-24 sm:pb-32 lg:pb-40 overflow-hidden">
         <Image
-          src="/senior-fairpflegebox-wohnzimmer.png"
+          src="/hero-nurse.jpg"
           alt="Älterer Herr mit FairPflegeBox im Wohnzimmer"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
         <div className="absolute inset-0 bg-[#43358B]/25" />
         <div
@@ -411,15 +415,28 @@ export default function KontaktPage() {
                   <p className="text-[12.5px] text-gray-500 mb-2">
                     {m.subtitle}
                   </p>
-                  <p
-                    className={`text-[14px] font-bold mb-1.5 ${
-                      m.highlight === "teal"
-                        ? "text-[#009CB4]"
-                        : "text-gray-900"
-                    }`}
-                  >
-                    {m.value}
-                  </p>
+                  {m.href ? (
+                    <a
+                      href={m.href}
+                      className={`block text-[14px] font-bold mb-1.5 hover:underline underline-offset-2 ${
+                        m.highlight === "teal"
+                          ? "text-[#009CB4]"
+                          : "text-gray-900"
+                      }`}
+                    >
+                      {m.value}
+                    </a>
+                  ) : (
+                    <p
+                      className={`text-[14px] font-bold mb-1.5 ${
+                        m.highlight === "teal"
+                          ? "text-[#009CB4]"
+                          : "text-gray-900"
+                      }`}
+                    >
+                      {m.value}
+                    </p>
+                  )}
                   <p className="text-[12px] text-gray-400 whitespace-pre-line leading-relaxed">
                     {m.note}
                   </p>

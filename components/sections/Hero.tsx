@@ -16,7 +16,7 @@ const slides = [
     sub: "Über die gesetzliche Pflegekasse.",
   },
   {
-    stat: "40 €",
+    stat: "42 €",
     label: "Monatliches Budget",
     sub: "Für Pflegehilfsmittel zum Verbrauch.",
   },
@@ -34,22 +34,29 @@ export default function Hero() {
     setProgress(0);
   }, []);
 
-  // Auto-advance — tick the progress bar smoothly, then jump to the next slide
+  // Auto-advance — tick the progress bar smoothly
   useEffect(() => {
     const id = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          setActive((a) => (a + 1) % slides.length);
-          return 0;
-        }
-        return prev + (TICK / SLIDE_DURATION) * 100;
-      });
+      setProgress((prev) =>
+        Math.min(prev + (TICK / SLIDE_DURATION) * 100, 100)
+      );
     }, TICK);
     return () => clearInterval(id);
   }, []);
 
+  // When progress fills, advance to the next slide. Kept separate from the
+  // progress tick to avoid React strict-mode double-invocation skipping slides.
+  useEffect(() => {
+    if (progress < 100) return;
+    const t = setTimeout(() => {
+      setActive((a) => (a + 1) % slides.length);
+      setProgress(0);
+    }, 30);
+    return () => clearTimeout(t);
+  }, [progress]);
+
   return (
-    <section className="relative min-h-[100svh] overflow-hidden" aria-label="Startseite Hero">
+    <section className="relative min-h-[88svh] sm:min-h-[100svh] overflow-hidden" aria-label="Startseite Hero">
       {/* Mobile background — elderly couple with FairPflegeBox box visible */}
       <Image
         src="/mission-aelteres-paar-fairpflegebox.jpg"
@@ -57,7 +64,7 @@ export default function Hero() {
         fill
         priority
         unoptimized
-        className="object-cover object-center sm:hidden"
+        className="object-cover object-[center_30%] sm:hidden"
       />
       {/* Desktop background — nurse supporting senior */}
       <Image
@@ -66,7 +73,7 @@ export default function Hero() {
         fill
         priority
         unoptimized
-        className="hidden sm:block object-cover object-center"
+        className="hidden sm:block object-cover object-[center_30%]"
       />
 
       {/* Purple gradient overlay */}

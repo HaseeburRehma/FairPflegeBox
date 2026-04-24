@@ -186,6 +186,49 @@ const categories: Category[] = [
    FAQ CARD
    ════════════════════════════════════ */
 
+/**
+ * Auto-linkify German phone numbers (+49 ...) and email addresses
+ * inside a plain-text FAQ answer string.
+ */
+function renderAnswer(text: string): ReactNode[] {
+  // Matches +49 176 95554394, or info@fairpflegebox.de, etc.
+  const regex = /(\+49[\s\d]{8,18}|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g;
+  const parts: ReactNode[] = [];
+  let lastIndex = 0;
+  let match;
+  let key = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    const token = match[0];
+    if (token.includes("@")) {
+      parts.push(
+        <a
+          key={`a-${key++}`}
+          href={`mailto:${token}`}
+          className="text-[#43358B] hover:text-[#009CB4] underline underline-offset-2"
+        >
+          {token}
+        </a>
+      );
+    } else {
+      parts.push(
+        <a
+          key={`a-${key++}`}
+          href={`tel:${token.replace(/\s/g, "")}`}
+          className="text-[#43358B] hover:text-[#009CB4] underline underline-offset-2"
+        >
+          {token}
+        </a>
+      );
+    }
+    lastIndex = match.index + token.length;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return parts;
+}
+
 function FAQItem({ faq }: { faq: FAQ }) {
   const [open, setOpen] = useState(false);
   return (
@@ -216,7 +259,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
         }`}
       >
         <p className="px-5 sm:px-6 pb-5 text-[13.5px] sm:text-[14px] text-gray-500 leading-relaxed">
-          {faq.a}
+          {renderAnswer(faq.a)}
         </p>
       </div>
     </div>
@@ -233,11 +276,11 @@ export default function HaeufigeFragenPage() {
       {/* ══════ HERO ══════ */}
       <section className="relative pt-36 sm:pt-44 lg:pt-52 pb-24 sm:pb-32 lg:pb-40 overflow-hidden">
         <Image
-          src="/senior-fairpflegebox-wohnzimmer.png"
+          src="/hero-kitchen.jpg"
           alt="Älterer Herr mit FairPflegeBox im Wohnzimmer"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
         {/* Subtle base tint + brand gradient fading from clear top to solid purple bottom */}
         <div className="absolute inset-0 bg-[#43358B]/25" />

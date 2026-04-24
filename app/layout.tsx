@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     images: [
       {
-        url: "/senior-fairpflegebox-wohnzimmer.png",
+        url: "/hero-nurse.jpg",
         width: 1200,
         height: 630,
         alt: "FairPflegeBox – Pflegehilfsmittel einfach und fair",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "FairPflegeBox – Pflegehilfsmittel einfach & fair",
     description:
       "Kostenlose Pflegehilfsmittel monatlich geliefert. Bis zu 42 € über die Pflegekasse.",
-    images: ["/senior-fairpflegebox-wohnzimmer.png"],
+    images: ["/hero-nurse.jpg"],
   },
   alternates: {
     canonical: SITE_URL,

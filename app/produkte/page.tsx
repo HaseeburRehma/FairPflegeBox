@@ -152,11 +152,11 @@ export default async function ProduktePage() {
       >
         {/* Background photo */}
         <Image
-          src="/senior-fairpflegebox-wohnzimmer.png"
+          src="/hero-nurse.jpg"
           alt="Älterer Herr mit FairPflegeBox im Wohnzimmer"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
 
         {/* Subtle base tint + brand gradient fading from clear top to solid purple bottom */}

@@ -32,11 +32,11 @@ const testimonials = [
     stars: 5,
   },
   {
-    name: "Klaus M.",
-    role: "Pflegender Angehöriger",
+    name: "Helga K.",
+    role: "Pflegende Angehörige",
     quote:
       `\u201eIch bin begeistert von der einfachen Bestellung und der schnellen Lieferung. Die Produkte sind hochwertig und genau das, was wir brauchen. Absolut empfehlenswert!\u201c`,
-    avatar: "/desktop-01.png",
+    avatar: "/testimonial-avatar-2.png",
     portrait: "/ecc395604dfa0fb936e6d06621ac1be119a2d329.png",
     stars: 5,
   },

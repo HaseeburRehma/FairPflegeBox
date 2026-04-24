@@ -12,16 +12,16 @@ const slides = [
     image: "/pflegeboxen-geliefert.png",
   },
   {
+    stat: "42 €",
+    title: "Monatliches Budget",
+    desc: "Nutzen Sie Ihr monatliches Pflegehilfsmittel-Budget von bis zu 42 Euro vollständig aus – flexibel und bedarfsgerecht.",
+    image: "/our-mission-1.jpg",
+  },
+  {
     stat: "100%",
     title: "Kostenlos über Pflegekasse",
     desc: "Alle Pflegehilfsmittel werden vollständig über die gesetzliche Pflegekasse abgerechnet – ohne Zuzahlungen oder versteckte Kosten.",
-    image: "/dedicated-volunteers.png",
-  },
-  {
-    stat: "40 €",
-    title: "Monatliches Budget",
-    desc: "Nutzen Sie Ihr monatliches Pflegehilfsmittel-Budget von bis zu 40 Euro vollständig aus – flexibel und bedarfsgerecht.",
-    image: "/stressfreier-prozess.png",
+    image: "/our-mission-2.jpg",
   },
 ];
 
@@ -40,16 +40,23 @@ export default function Features() {
   // Auto-advance with smooth progress bar
   useEffect(() => {
     const id = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          setActive((a) => (a + 1) % slides.length);
-          return 0;
-        }
-        return prev + (TICK / SLIDE_DURATION) * 100;
-      });
+      setProgress((prev) =>
+        Math.min(prev + (TICK / SLIDE_DURATION) * 100, 100)
+      );
     }, TICK);
     return () => clearInterval(id);
   }, []);
+
+  // When progress fills, advance to the next slide. Kept separate from the
+  // progress tick to avoid React strict-mode double-invocation skipping slides.
+  useEffect(() => {
+    if (progress < 100) return;
+    const t = setTimeout(() => {
+      setActive((a) => (a + 1) % slides.length);
+      setProgress(0);
+    }, 30);
+    return () => clearTimeout(t);
+  }, [progress]);
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white">

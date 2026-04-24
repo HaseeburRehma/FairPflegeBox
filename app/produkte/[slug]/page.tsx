@@ -45,11 +45,11 @@ export default function ProductDetailPage({ params }: { params: Params }) {
       {/* ══════ HERO — same pattern as /pflichtangaben ══════ */}
       <section className="relative pt-36 sm:pt-44 lg:pt-52 pb-24 sm:pb-32 lg:pb-40 overflow-hidden">
         <Image
-          src="/senior-fairpflegebox-wohnzimmer.png"
+          src="/hero-nurse.jpg"
           alt="FairPflegeBox – Pflegehilfsmittel"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
         {/* Subtle base tint + brand gradient fading from clear top to solid purple bottom */}
         <div className="absolute inset-0 bg-[#43358B]/25" />

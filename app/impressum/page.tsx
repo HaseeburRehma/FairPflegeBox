@@ -15,11 +15,11 @@ export default function ImpressumPage() {
       {/* ══════ HERO ══════ */}
       <section className="relative pt-36 sm:pt-44 lg:pt-52 pb-24 sm:pb-32 lg:pb-40 overflow-hidden">
         <Image
-          src="/senior-fairpflegebox-wohnzimmer.png"
+          src="/hero-garden.jpg"
           alt="FairPflegeBox – Impressum"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
         <div className="absolute inset-0 bg-[#43358B]/25" />
         <div
@@ -66,9 +66,10 @@ export default function ImpressumPage() {
 
               <h2>Kontakt</h2>
               <p>
-                Telefon: +49 176 95554394
+                Telefon: <a href="tel:+4917695554394">+49 176 95554394</a>
                 <br />
-                E-Mail: info@fairpflegebox.de
+                E-Mail:{" "}
+                <a href="mailto:info@fairpflegebox.de">info@fairpflegebox.de</a>
               </p>
 
               <h2>Umsatzsteuer-Identifikationsnummer</h2>
