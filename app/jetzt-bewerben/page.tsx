@@ -21,9 +21,9 @@ type Method = {
 const contactMethods: Method[] = [
   {
     title: "Telefon",
-    subtitle: "Kostenlose Hotline",
-    value: "0800 123 456 78",
-    note: "Mo–Fr, 8:00–18:00 Uhr",
+    subtitle: "Direkter Kontakt",
+    value: "+49 176 95554394",
+    note: "Rückruf auf Wunsch möglich",
     highlight: "teal",
     icon: (
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,8 +73,8 @@ const contactMethods: Method[] = [
   {
     title: "Postanschrift",
     subtitle: "Schriftlicher Kontakt",
-    value: "FairPflegebox GmbH",
-    note: "Musterstraße 10\n10115 Berlin",
+    value: "FairPflegeBox GbR",
+    note: "Reisholzer Werftstraße 76\n40589 Düsseldorf",
     highlight: "dark",
     icon: (
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">

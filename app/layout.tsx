@@ -103,7 +103,7 @@ const organizationJsonLd = {
     "FairPflegeBox liefert monatlich kostenlose Pflegehilfsmittel direkt nach Hause – bis zu 42 € über die Pflegekasse.",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+49-800-123-456-78",
+    telephone: "+49-176-95554394",
     contactType: "customer service",
     email: "info@fairpflegebox.de",
     availableLanguage: ["German"],
@@ -111,9 +111,9 @@ const organizationJsonLd = {
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Musterstraße 10",
-    postalCode: "10115",
-    addressLocality: "Berlin",
+    streetAddress: "Reisholzer Werftstraße 76",
+    postalCode: "40589",
+    addressLocality: "Düsseldorf",
     addressCountry: "DE",
   },
   sameAs: [
