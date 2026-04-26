@@ -418,7 +418,7 @@ export default function SoFunktioniertEsPage() {
             <ScrollReveal>
               <div className="relative rounded-[28px] overflow-hidden aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5] max-h-[620px] w-full">
                 <Image
-                  src="/pflegebox-mutter-tochter-gluecklich.png"
+                  src="/pflegebox-mutter-tochter-sofa.jpg"
                   alt="Gl\u00fcckliche Mutter und Tochter mit FairPflegeBox Pflegehilfsmitteln"
                   fill
                   className="object-cover object-top"
@@ -440,7 +440,7 @@ export default function SoFunktioniertEsPage() {
         <div className="container mx-auto px-5 sm:px-6 xl:px-12 max-w-[1280px]">
           <div className="relative rounded-3xl overflow-hidden min-h-[360px] sm:min-h-[420px] lg:min-h-[460px]">
             <Image
-              src="/pflegebox-seniorin-betreuerin-garten.png"
+              src="/pflegebox-lieferung-zuhause-senior.jpg"
               alt="Seniorin und Betreuerin freuen sich \u00fcber FairPflegeBox im Garten"
               fill
               className="object-cover object-top"

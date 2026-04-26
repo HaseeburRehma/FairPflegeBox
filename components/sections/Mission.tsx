@@ -53,8 +53,8 @@ export default function Mission() {
           {/* COL 2: Tall center image */}
           <div className="relative rounded-3xl overflow-hidden aspect-[3/4] w-full">
             <Image
-              src="/our-mission-1.jpg"
-              alt="Älteres Paar freut sich über FairPflegeBox Pflegehilfsmittel"
+              src="/unsere-mission-aelteres-paar-fairpflegebox.jpg"
+              alt="Älteres Paar freut sich über FairPflegeBox Pflegehilfsmittel zu Hause"
               fill
               className="object-cover object-center"
             />
@@ -85,8 +85,8 @@ export default function Mission() {
               {/* Small image */}
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] w-full">
                 <Image
-                  src="/our-mission-2.jpg"
-                  alt="Älteres Paar öffnet FairPflegeBox Lieferung zu Hause"
+                  src="/unboxing-fairpflegebox-seniorenpaar-kueche.jpg"
+                  alt="Seniorenpaar öffnet FairPflegeBox mit Pflegehilfsmitteln in der Küche"
                   fill
                   className="object-cover object-center"
                 />

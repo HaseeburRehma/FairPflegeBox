@@ -36,23 +36,58 @@ const produktgruppen = [
   {
     title: "Hygiene & Desinfektion",
     products: [
-      { id: "hand-desinfektion", name: "H\u00e4ndedesinfektionsmittel (500ml)", price: "6,50" },
-      { id: "flaechen-desinfektion", name: "Fl\u00e4chendesinfektionsmittel (500ml)", price: "5,90" },
+      {
+        id: "hand-desinfektion",
+        name: "H\u00e4ndedesinfektionsmittel (500ml)",
+        price: "6,50",
+        image: "/products/sterillium-bottle.png",
+      },
+      {
+        id: "flaechen-desinfektion",
+        name: "Fl\u00e4chendesinfektionsmittel (500ml)",
+        price: "5,90",
+        image: "/products/bacillol-sensitive.png",
+      },
     ],
   },
   {
     title: "Schutzkleidung",
     products: [
-      { id: "handschuhe", name: "Einmalhandschuhe (100 St\u00fcck)", price: "7,80" },
-      { id: "mundschutz", name: "Mundschutz (50 St\u00fcck)", price: "5,50" },
-      { id: "schutzschuerzen", name: "Schutzsch\u00fcrzen (50 St\u00fcck)", price: "8,90" },
+      {
+        id: "handschuhe",
+        name: "Einmalhandschuhe (100 St\u00fcck)",
+        price: "7,80",
+        image: "/products/peha-soft-vinyl.png",
+      },
+      {
+        id: "mundschutz",
+        name: "Mundschutz (50 St\u00fcck)",
+        price: "5,50",
+        image: "/products/foliodress-mask.png",
+      },
+      {
+        id: "schutzschuerzen",
+        name: "Schutzsch\u00fcrzen (50 St\u00fcck)",
+        price: "8,90",
+        image: "/products/valacomfort-apron.png",
+      },
     ],
   },
   {
     title: "Inkontinenz & Schutz",
     products: [
-      { id: "bettschutz", name: "Bettschutzeinlagen (25 St\u00fcck)", price: "9,80" },
-      { id: "fingerlinge", name: "Fingerlinge (100 St\u00fcck)", price: "3,50" },
+      {
+        id: "bettschutz",
+        name: "Bettschutzeinlagen (25 St\u00fcck)",
+        price: "9,80",
+        image: "/products/molicare-bed-mat.png",
+      },
+      {
+        id: "fingerlinge",
+        name: "Fingerlinge (100 St\u00fcck)",
+        price: "3,50",
+        image: "/products/washable-bedpad.png",
+      },
     ],
   },
 ];
@@ -429,12 +464,13 @@ export default function PflegepaketPage() {
                               {group.products.map((p) => (
                                 <label
                                   key={p.id}
-                                  className={`flex items-center gap-3 px-4 py-3 rounded-xl border cursor-pointer transition-all duration-200 ${
+                                  className={`flex items-center gap-3 px-3 py-3 rounded-xl border cursor-pointer transition-all duration-200 ${
                                     selectedProducts.includes(p.id)
                                       ? "border-[#009CB4] bg-[#F0FAFB]"
                                       : "border-gray-200 hover:border-gray-300"
                                   }`}
                                 >
+                                  {/* Checkbox */}
                                   <span
                                     className={`w-5 h-5 rounded-md border flex items-center justify-center flex-shrink-0 transition-colors ${
                                       selectedProducts.includes(p.id)
@@ -448,9 +484,23 @@ export default function PflegepaketPage() {
                                       </svg>
                                     )}
                                   </span>
-                                  <span className="text-[14px] font-medium text-gray-900 truncate">
+
+                                  {/* Product thumbnail */}
+                                  <span className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                                    <Image
+                                      src={p.image}
+                                      alt={p.name}
+                                      fill
+                                      sizes="48px"
+                                      className="object-cover"
+                                    />
+                                  </span>
+
+                                  {/* Name */}
+                                  <span className="text-[14px] font-medium text-gray-900 truncate flex-1">
                                     {p.name.replace(/\s*\([^)]*\)\s*/g, "")}
                                   </span>
+
                                   <input
                                     type="checkbox"
                                     checked={selectedProducts.includes(p.id)}

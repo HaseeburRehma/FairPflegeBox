@@ -37,8 +37,8 @@ export default function HowItWorks() {
           {/* ══════ LEFT: Image ══════ */}
           <div className="relative rounded-3xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[600px] w-full">
             <Image
-              src="/pflegebox-mutter-tochter-gluecklich.png"
-              alt="Glückliche Mutter und Tochter mit FairPflegeBox Pflegehilfsmitteln"
+              src="/pflegebox-mutter-tochter-sofa.jpg"
+              alt="Mutter und Tochter mit FairPflegeBox auf dem Sofa – Pflegehilfsmittel einfach erhalten"
               fill
               className="object-cover object-center"
             />

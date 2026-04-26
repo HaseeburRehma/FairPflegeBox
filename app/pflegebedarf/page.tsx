@@ -289,7 +289,7 @@ export default function PflegebedarfPage() {
                 {/* Right: image (landscape) */}
                 <div className="relative rounded-2xl overflow-hidden aspect-[16/10] lg:aspect-[16/11] w-full">
                   <Image
-                    src="/seniorin-betreuerin-fairpflegebox-garten.png"
+                    src="/pflegebox-lieferung-zuhause-senior.jpg"
                     alt="Seniorin und Betreuerin mit FairPflegeBox im Garten"
                     fill
                     className="object-cover object-top"

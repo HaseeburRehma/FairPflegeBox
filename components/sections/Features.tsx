@@ -15,13 +15,13 @@ const slides = [
     stat: "42 €",
     title: "Monatliches Budget",
     desc: "Nutzen Sie Ihr monatliches Pflegehilfsmittel-Budget von bis zu 42 Euro vollständig aus – flexibel und bedarfsgerecht.",
-    image: "/our-mission-1.jpg",
+    image: "/pflegebox-lieferung-zuhause-senior.jpg",
   },
   {
     stat: "100%",
     title: "Kostenlos über Pflegekasse",
     desc: "Alle Pflegehilfsmittel werden vollständig über die gesetzliche Pflegekasse abgerechnet – ohne Zuzahlungen oder versteckte Kosten.",
-    image: "/our-mission-2.jpg",
+    image: "/unboxing-fairpflegebox-seniorenpaar-kueche.jpg",
   },
 ];
 

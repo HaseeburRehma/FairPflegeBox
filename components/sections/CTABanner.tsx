@@ -12,7 +12,7 @@ export default function CTABanner() {
 
           {/* Background image */}
           <Image
-            src="/pflegebox-seniorin-betreuerin-garten.png"
+            src="/pflegebox-lieferung-zuhause-senior.jpg"
             alt="Seniorin und Betreuerin freuen sich über FairPflegeBox im Garten"
             fill
             className="object-cover object-center"
