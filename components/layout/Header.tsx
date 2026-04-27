@@ -56,21 +56,32 @@ export default function Header() {
             : "shadow-[0_2px_12px_rgba(0,0,0,0.06)]"
           }`}
       >
-        <div className="flex items-center justify-between px-4 sm:px-5 h-[72px] sm:h-[80px]">
-          {/* Logo — single image (transparent PNG, full wordmark + tagline baked in) */}
+        <div className="flex items-center justify-between px-4 sm:px-5 h-[60px] sm:h-[64px]">
+          {/* Logo — icon on left, stacked wordmark + tagline on right (footer-matched colors) */}
           <Link
             href="/"
-            className="flex items-center flex-shrink-0"
-            aria-label="FairPflegeBox – Pflegehilfsmittel einfach & fair"
+            className="flex items-center gap-2.5 flex-shrink-0"
+            aria-label="FairPflegeBox – Startseite"
           >
             <Image
-              src="/fairpflegebox-logo.png"
-              alt="FairPflegeBox – Pflegehilfsmittel einfach & fair"
-              width={547}
-              height={400}
+              src="/logo-icon.png"
+              alt=""
+              width={332}
+              height={266}
               priority
-              className="h-14 sm:h-16 w-auto object-contain select-none"
+              unoptimized
+              className="h-9 sm:h-10 w-auto object-contain select-none"
             />
+            <div className="flex flex-col leading-none">
+              <span className="text-[17px] sm:text-[18px] font-extrabold tracking-tight leading-[1.05]">
+                <span className="text-[#43358B]">Fair</span>
+                <span className="text-[#009CB4]">Pflege</span>
+                <span className="text-[#C4288F]">Box</span>
+              </span>
+              <span className="text-[9px] sm:text-[10px] font-medium text-[#C9A227] tracking-[0.02em] mt-[3px]">
+                Pflegehilfsmittel einfach &amp; fair
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
