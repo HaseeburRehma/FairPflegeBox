@@ -45,18 +45,16 @@ export default function Header() {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 pt-2.5 sm:pt-3 transition-all duration-500 ease-out ${
-        visible
+      className={`fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 pt-2.5 sm:pt-3 transition-all duration-500 ease-out ${visible
           ? "translate-y-0 opacity-100"
           : "-translate-y-full opacity-0"
-      }`}
+        }`}
     >
       <header
-        className={`bg-white/95 backdrop-blur-md rounded-2xl transition-all duration-300 max-w-[1320px] mx-auto ${
-          scrolled
+        className={`bg-white/95 backdrop-blur-md rounded-2xl transition-all duration-300 max-w-[1320px] mx-auto ${scrolled
             ? "shadow-[0_4px_30px_rgba(67,53,139,0.12)]"
             : "shadow-[0_2px_12px_rgba(0,0,0,0.06)]"
-        }`}
+          }`}
       >
         <div className="flex items-center justify-between px-4 sm:px-5 h-[60px] sm:h-[64px]">
           {/* Logo — icon on left, stacked wordmark + tagline on right */}
@@ -77,7 +75,7 @@ export default function Header() {
             <div className="flex flex-col leading-none">
               <span className="text-[17px] sm:text-[18px] font-extrabold tracking-tight leading-[1.05]">
                 <span className="text-[#43358B]">Fair</span>
-                <span className="text-[#B33C8A]">Pflege</span>
+                <span className="text-[#009CB4]">Pflege</span>
                 <span className="text-[#43358B]">Box</span>
               </span>
               <span className="text-[9px] sm:text-[10px] font-medium text-[#009CB4] tracking-[0.02em] mt-[3px]">
@@ -122,19 +120,16 @@ export default function Header() {
           >
             <div className="w-5 h-5 relative flex items-center justify-center">
               <span
-                className={`absolute h-[2px] w-5 bg-current rounded-full transition-all duration-300 ${
-                  mobileOpen ? "rotate-45" : "-translate-y-1.5"
-                }`}
+                className={`absolute h-[2px] w-5 bg-current rounded-full transition-all duration-300 ${mobileOpen ? "rotate-45" : "-translate-y-1.5"
+                  }`}
               />
               <span
-                className={`absolute h-[2px] w-5 bg-current rounded-full transition-all duration-300 ${
-                  mobileOpen ? "opacity-0 scale-0" : "opacity-100"
-                }`}
+                className={`absolute h-[2px] w-5 bg-current rounded-full transition-all duration-300 ${mobileOpen ? "opacity-0 scale-0" : "opacity-100"
+                  }`}
               />
               <span
-                className={`absolute h-[2px] w-5 bg-current rounded-full transition-all duration-300 ${
-                  mobileOpen ? "-rotate-45" : "translate-y-1.5"
-                }`}
+                className={`absolute h-[2px] w-5 bg-current rounded-full transition-all duration-300 ${mobileOpen ? "-rotate-45" : "translate-y-1.5"
+                  }`}
               />
             </div>
           </button>
@@ -142,9 +137,8 @@ export default function Header() {
 
         {/* Mobile menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-400 ease-out ${
-            mobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-400 ease-out ${mobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="border-t border-gray-100" />
           <nav className="px-4 py-3 flex flex-col gap-0.5">

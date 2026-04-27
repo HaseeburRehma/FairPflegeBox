@@ -113,7 +113,12 @@ const produktkategorien = [
   },
   {
     title: "Desinfektionsmittel",
-    items: ["Händedesinfektionsmittel", "Flächendesinfektionsmittel"],
+    items: [
+      "Händedesinfektionsmittel",
+      "Händedesinfektionstücher",
+      "Flächendesinfektionsmittel",
+      "Flächendesinfektionstücher",
+    ],
     icon: (
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path

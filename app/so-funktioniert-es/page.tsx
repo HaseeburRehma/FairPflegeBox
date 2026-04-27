@@ -534,7 +534,7 @@ function FAQSection() {
                 </svg>
               </span>
               <span className="text-[13px] sm:text-sm font-semibold text-gray-800 tracking-wide">
-                H\u00e4ufige Fragen
+                Häufige Fragen
               </span>
             </div>
 

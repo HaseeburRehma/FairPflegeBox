@@ -38,14 +38,26 @@ const produktgruppen = [
     products: [
       {
         id: "hand-desinfektion",
-        name: "H\u00e4ndedesinfektionsmittel (500ml)",
+        name: "Händedesinfektionsmittel",
         price: "6,50",
         image: "/products/sterillium-bottle.png",
       },
       {
-        id: "flaechen-desinfektion",
-        name: "Fl\u00e4chendesinfektionsmittel (500ml)",
+        id: "hand-desinfektionstuecher",
+        name: "Händedesinfektionstücher",
         price: "5,90",
+        image: "/products/sterillium-home-wipes.png",
+      },
+      {
+        id: "flaechen-desinfektion",
+        name: "Flächendesinfektionsmittel",
+        price: "5,90",
+        image: "/products/bacillol-sensitive.png",
+      },
+      {
+        id: "flaechen-desinfektionstuecher",
+        name: "Flächendesinfektionstücher",
+        price: "6,80",
         image: "/products/bacillol-sensitive.png",
       },
     ],
