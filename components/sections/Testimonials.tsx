@@ -27,8 +27,8 @@ const testimonials = [
     role: "Pflegender Angehöriger",
     quote:
       `\u201eFairPflegeBox hat uns den Alltag enorm erleichtert. Kein Papierkram, keine Apotheken-Besuche \u2013 alles kommt pünktlich nach Hause. Ein großartiger Service für pflegende Familien.\u201c`,
-    avatar: "/desktop-01-2.png",
-    portrait: "/testimonial-portrait-1.png",
+    avatar: "/testimonial-avatar-2.png",
+    portrait: "/pflegebox-lieferung-zuhause-senior.jpg",
     stars: 5,
   },
   {
@@ -36,7 +36,7 @@ const testimonials = [
     role: "Pflegende Angehörige",
     quote:
       `\u201eIch bin begeistert von der einfachen Bestellung und der schnellen Lieferung. Die Produkte sind hochwertig und genau das, was wir brauchen. Absolut empfehlenswert!\u201c`,
-    avatar: "/testimonial-avatar-2.png",
+    avatar: "/desktop-02.png",
     portrait: "/ecc395604dfa0fb936e6d06621ac1be119a2d329.png",
     stars: 5,
   },
