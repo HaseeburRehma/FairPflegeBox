@@ -19,7 +19,7 @@ const testimonials = [
     quote:
       `\u201eDie Bestellung war sehr einfach und die Boxen kamen schnell. Die Produkte sind praktisch und ich bin sehr zufrieden! Die Qualität und auch der Inhalt dieser Box gefallen mir sehr.\u201c`,
     avatar: "/testimonial-avatar-1.png",
-    portrait: "/image-Wrapper.png",
+    portrait: "/heda.png",
     stars: 5,
   },
   {
@@ -115,8 +115,8 @@ export default function Testimonials() {
                 key={i}
                 onClick={() => setActive(i)}
                 className={`relative rounded-full overflow-hidden flex-shrink-0 transition-all duration-300 ${i === active
-                    ? "w-14 h-14 ring-[3px] ring-[#009CB4] ring-offset-2 ring-offset-[#43358B] scale-105"
-                    : "w-12 h-12 opacity-60 hover:opacity-90"
+                  ? "w-14 h-14 ring-[3px] ring-[#009CB4] ring-offset-2 ring-offset-[#43358B] scale-105"
+                  : "w-12 h-12 opacity-60 hover:opacity-90"
                   }`}
                 aria-label={t.name}
               >
@@ -155,8 +155,8 @@ export default function Testimonials() {
                 <div
                   key={i}
                   className={`transition-all duration-500 ${i === active
-                      ? "opacity-100 relative"
-                      : "opacity-0 absolute pointer-events-none"
+                    ? "opacity-100 relative"
+                    : "opacity-0 absolute pointer-events-none"
                     }`}
                 >
                   <Stars count={t.stars} />
