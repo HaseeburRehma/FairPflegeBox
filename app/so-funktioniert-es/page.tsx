@@ -441,9 +441,9 @@ export default function SoFunktioniertEsPage() {
           <div className="relative rounded-3xl overflow-hidden min-h-[360px] sm:min-h-[420px] lg:min-h-[460px]">
             <Image
               src="/pflegebox-lieferung-zuhause-senior.jpg"
-              alt="Seniorin und Betreuerin freuen sich \u00fcber FairPflegeBox im Garten"
+              alt="Senior und Pflegender erhalten FairPflegeBox zu Hause"
               fill
-              className="object-cover object-top"
+              className="object-cover object-center"
             />
             <div
               className="absolute inset-0"
@@ -455,12 +455,12 @@ export default function SoFunktioniertEsPage() {
             <div className="relative z-10 flex flex-col justify-end h-full min-h-[360px] sm:min-h-[420px] lg:min-h-[460px] p-6 sm:p-10 lg:p-14">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-end">
                 <h2 className="text-[26px] sm:text-[34px] lg:text-[40px] font-medium text-white leading-[1.1]">
-                  Bereit f\u00fcr Ihre<br /> kostenlose Pflegebox?
+                  Bereit für Ihre<br /> kostenlose Pflegebox?
                 </h2>
                 <div className="flex flex-col items-start gap-5 md:max-w-[360px] md:justify-self-end">
                   <p className="text-[14px] sm:text-[15px] text-white leading-relaxed">
                     Starten Sie jetzt Ihre Bewerbung – in nur 3 Minuten
-                    ausgef\u00fcllt und ohne Papierkram.
+                    ausgefüllt und ohne Papierkram.
                   </p>
                   <Link
                     href="/pflegepaket"

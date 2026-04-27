@@ -83,9 +83,9 @@ const produktgruppen = [
         image: "/products/molicare-bed-mat.png",
       },
       {
-        id: "fingerlinge",
-        name: "Fingerlinge (100 St\u00fcck)",
-        price: "3,50",
+        id: "waschbare-bettauflagen",
+        name: "Waschbare Bettauflagen (1 St\u00fcck)",
+        price: "0,00",
         image: "/products/washable-bedpad.png",
       },
     ],
