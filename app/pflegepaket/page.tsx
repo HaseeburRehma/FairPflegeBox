@@ -486,13 +486,14 @@ export default function PflegepaketPage() {
                                   </span>
 
                                   {/* Product thumbnail */}
-                                  <span className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                                  <span className="relative w-16 h-12 rounded-lg overflow-hidden flex-shrink-0">
                                     <Image
                                       src={p.image}
                                       alt={p.name}
                                       fill
-                                      sizes="48px"
-                                      className="object-cover"
+                                      sizes="64px"
+                                      quality={95}
+                                      className="object-cover object-center"
                                     />
                                   </span>
 

@@ -299,7 +299,7 @@ export default function HaeufigeFragenPage() {
             </h1>
             <p className="text-[15px] sm:text-[17px] text-white/85 leading-relaxed max-w-xl mx-auto mb-7">
               Hier finden Sie schnelle Antworten auf die wichtigsten Fragen zu
-              Ihrem Anspruch und der FairPflegebox.
+              Ihrem Anspruch und der FairPflegeBox.
             </p>
 
             {/* Trust pill */}

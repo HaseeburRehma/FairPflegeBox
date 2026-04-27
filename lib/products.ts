@@ -175,10 +175,9 @@ export const products: Product[] = [
   {
     id: "bettauflage",
     slug: "bettauflage",
-    title:
-      "Ihr Extra für die 42 €: Waschbare Bettauflagen kostenlos enthalten",
+    title: "Waschbare Bettauflagen",
     intro:
-      "Wiederverwendbare rutschfeste Bettauflagen aus weichem Stoff – bis zu 300 Waschgänge bei 95 °C.",
+      "Wiederverwendbare rutschfeste Bettauflagen aus weichem Stoff – bis zu 300 Waschgänge bei 95 °C. Bis zu vier Stück pro Jahr zusätzlich zur FairPflegeBox kostenfrei über die Pflegekasse.",
     bullets: [
       "Rutschfest, weich und besonders saugstark",
       "Waschbar bis 95 °C, bis zu 300 Waschgänge",

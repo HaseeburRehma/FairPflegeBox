@@ -171,11 +171,11 @@ export default function Hero() {
                 {/* Right column: portrait image — rounded corners, inset from card edges */}
                 <div className="relative w-[180px] sm:w-[210px] flex-shrink-0 rounded-2xl overflow-hidden self-stretch">
                   <Image
-                    src="/image-wrapper.png"
-                    alt="Zufriedene Pflegebedürftige Person zu Hause"
+                    src="/fairpflegebox-haende-senior.jpg"
+                    alt="Seniorin hält FairPflegeBox in den Händen"
                     fill
-                    unoptimized
-                    className="object-cover"
+                    sizes="(min-width: 640px) 210px, 180px"
+                    className="object-cover object-center"
                   />
                 </div>
               </div>

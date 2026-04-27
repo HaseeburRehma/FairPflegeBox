@@ -9,13 +9,13 @@ const slides = [
     stat: "300+",
     title: "Pflegeboxen geliefert",
     desc: "FairPflegeBox hilft Haushalten, regelmäßig essentielle Pflegeprodukte zu erhalten, wodurch die tägliche Bestellung einfacher und zuverlässiger wird.",
-    image: "/pflegeboxen-geliefert.png",
+    image: "/pflegebox-lieferung-zuhause-senior.jpg",
   },
   {
     stat: "42 €",
     title: "Monatliches Budget",
     desc: "Nutzen Sie Ihr monatliches Pflegehilfsmittel-Budget von bis zu 42 Euro vollständig aus – flexibel und bedarfsgerecht.",
-    image: "/pflegebox-lieferung-zuhause-senior.jpg",
+    image: "/unsere-mission-aelteres-paar-fairpflegebox.jpg",
   },
   {
     stat: "100%",

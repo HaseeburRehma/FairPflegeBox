@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 export const metadata: Metadata = {
   title: "Über uns – Ihr Anspruch auf Pflegehilfsmittel | FairPflegeBox",
   description:
-    "Warum es die FairPflegebox gibt, was uns antreibt und wer hinter dem Unternehmen steht. Einfach erklärt: Ihr gesetzlicher Anspruch auf Pflegehilfsmittel bis zu 42 € pro Monat.",
+    "Warum es die FairPflegeBox gibt, was uns antreibt und wer hinter dem Unternehmen steht. Einfach erklärt: Ihr gesetzlicher Anspruch auf Pflegehilfsmittel bis zu 42 € pro Monat.",
 };
 
 const values = [
@@ -169,12 +169,12 @@ export default function UeberUnsPage() {
                   </div>
 
                   <h2 className="text-[26px] sm:text-[32px] lg:text-[36px] font-medium text-gray-900 leading-[1.15] mb-5">
-                    Warum es die FairPflegebox gibt
+                    Warum es die FairPflegeBox gibt
                   </h2>
 
                   <div className="space-y-4 text-[14px] sm:text-[15px] text-gray-600 leading-relaxed mb-7">
                     <p>
-                      Die FairPflegebox entstand aus einer einfachen Erkenntnis:
+                      Die FairPflegeBox entstand aus einer einfachen Erkenntnis:
                       Viele pflegebedürftige Menschen und ihre Angehörigen
                       wissen nicht, dass sie Anspruch auf kostenlose
                       Pflegehilfsmittel haben – oder der Antragsprozess
@@ -286,7 +286,7 @@ export default function UeberUnsPage() {
                 </h2>
 
                 <p className="text-[14px] sm:text-[15px] text-gray-600 leading-relaxed mb-8">
-                  Hinter der FairPflegebox steht ein Team von Pflegeexperten,
+                  Hinter der FairPflegeBox steht ein Team von Pflegeexperten,
                   Kundenservice-Mitarbeitern und engagierten Mitarbeitern, die
                   alle ein gemeinsames Ziel haben: Ihr Leben einfacher zu
                   machen. Unsere Mitarbeiter bringen jahrelange Erfahrung aus
@@ -338,7 +338,7 @@ export default function UeberUnsPage() {
               <div className="relative rounded-3xl overflow-hidden aspect-[4/3] w-full">
                 <Image
                   src="/team-kundenservice-mitarbeiterin.jpg"
-                  alt="FairPflegebox Team – Kundenservice-Mitarbeiterin"
+                  alt="FairPflegeBox Team – Kundenservice-Mitarbeiterin"
                   fill
                   className="object-cover object-top"
                 />
