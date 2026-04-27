@@ -19,7 +19,7 @@ const testimonials = [
     quote:
       `\u201eDie Bestellung war sehr einfach und die Boxen kamen schnell. Die Produkte sind praktisch und ich bin sehr zufrieden! Die Qualität und auch der Inhalt dieser Box gefallen mir sehr.\u201c`,
     avatar: "/testimonial-avatar-1.png",
-    portrait: "/Image-Wrapper.png",
+    portrait: "/image-Wrapper.png",
     stars: 5,
   },
   {
@@ -114,11 +114,10 @@ export default function Testimonials() {
               <button
                 key={i}
                 onClick={() => setActive(i)}
-                className={`relative rounded-full overflow-hidden flex-shrink-0 transition-all duration-300 ${
-                  i === active
+                className={`relative rounded-full overflow-hidden flex-shrink-0 transition-all duration-300 ${i === active
                     ? "w-14 h-14 ring-[3px] ring-[#009CB4] ring-offset-2 ring-offset-[#43358B] scale-105"
                     : "w-12 h-12 opacity-60 hover:opacity-90"
-                }`}
+                  }`}
                 aria-label={t.name}
               >
                 <Image
@@ -144,9 +143,8 @@ export default function Testimonials() {
                   alt={t.name}
                   fill
                   unoptimized
-                  className={`object-cover object-center transition-opacity duration-500 ${
-                    i === active ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`object-cover object-center transition-opacity duration-500 ${i === active ? "opacity-100" : "opacity-0"
+                    }`}
                 />
               ))}
             </div>
@@ -156,11 +154,10 @@ export default function Testimonials() {
               {testimonials.map((t, i) => (
                 <div
                   key={i}
-                  className={`transition-all duration-500 ${
-                    i === active
+                  className={`transition-all duration-500 ${i === active
                       ? "opacity-100 relative"
                       : "opacity-0 absolute pointer-events-none"
-                  }`}
+                    }`}
                 >
                   <Stars count={t.stars} />
 
