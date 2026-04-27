@@ -15,7 +15,7 @@ const services = [
     title: "Zuverlässige monatliche Lieferung",
     description:
       "Ihre FairPflegeBox kommt jeden Monat pünktlich, direkt zu Ihnen nach Hause.",
-    image: "/Image.png",
+    image: "/zuverlaessige-monatliche-lieferung.png",
     imageAlt: "FairPflegeBox zuverlässige Lieferung an der Haustür",
     cta: "Sehen Sie, wie die Lieferung funktioniert",
     href: "/so-funktioniert-es",
