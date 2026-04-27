@@ -52,7 +52,7 @@ const produktgruppen = [
         id: "flaechen-desinfektion",
         name: "Flächendesinfektionsmittel",
         price: "5,90",
-        image: "/products/bacillol-sensitive.png",
+        image: "/products/bacillol-af-flaeche.jpg",
       },
       {
         id: "flaechen-desinfektionstuecher",
@@ -503,8 +503,8 @@ export default function PflegepaketPage() {
                                       src={p.image}
                                       alt={p.name}
                                       fill
-                                      sizes="64px"
-                                      quality={95}
+                                      sizes="(min-width: 1024px) 128px, (min-width: 640px) 96px, 64px"
+                                      quality={100}
                                       className="object-cover object-center"
                                     />
                                   </span>
