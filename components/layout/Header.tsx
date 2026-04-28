@@ -46,14 +46,14 @@ export default function Header() {
   return (
     <div
       className={`fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 pt-2.5 sm:pt-3 transition-all duration-500 ease-out ${visible
-          ? "translate-y-0 opacity-100"
-          : "-translate-y-full opacity-0"
+        ? "translate-y-0 opacity-100"
+        : "-translate-y-full opacity-0"
         }`}
     >
       <header
         className={`bg-white/95 backdrop-blur-md rounded-2xl transition-all duration-300 max-w-[1320px] mx-auto ${scrolled
-            ? "shadow-[0_4px_30px_rgba(67,53,139,0.12)]"
-            : "shadow-[0_2px_12px_rgba(0,0,0,0.06)]"
+          ? "shadow-[0_4px_30px_rgba(67,53,139,0.12)]"
+          : "shadow-[0_2px_12px_rgba(0,0,0,0.06)]"
           }`}
       >
         <div className="flex items-center justify-between px-4 sm:px-5 h-[60px] sm:h-[64px]">
@@ -78,7 +78,7 @@ export default function Header() {
                 <span className="text-[#009CB4]">Pflege</span>
                 <span className="text-[#C4288F]">Box</span>
               </span>
-              <span className="text-[9px] sm:text-[10px] font-medium text-[#C9A227] tracking-[0.02em] mt-[3px]">
+              <span className="text-[9px] sm:text-[10px] font-medium text-[#C4288F] tracking-[0.02em] mt-[3px]">
                 Pflegehilfsmittel einfach &amp; fair
               </span>
             </div>
